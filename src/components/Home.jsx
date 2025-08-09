@@ -1,0 +1,186 @@
+import profilePic from "../assets/profile.png";
+import eye from "../assets/eye.svg";
+import github from "../assets/github.png";
+import gmail from "../assets/gmail.png";
+import TopBottomBorder from "./TopBottomBorder";
+import { useEffect, useState } from "react";
+
+const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
+  const [isHomeVisible, setIsHomeVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (!isLoading && showContent) {
+      const timer = setTimeout(() => {
+        setIsHomeVisible(true);
+      }, 200);
+      return () => setTimeout(timer);
+    }
+  }, [isLoading, showContent]);
+
+  return (
+    <div
+      id="hero"
+      className="h-dvh max-w-standard w-full flex flex-col justify-center mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x-2 border-line bg-transparent z-10 relative"
+    >
+
+      {/* Mobilie Menu Bar */}
+        {isMenuOpen && (
+          <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-white shadow-md px-4 py-2 z-40">
+            <a href="#about" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
+              About
+            </a>
+            <a href="#projects" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
+              Projects
+            </a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
+              Contact
+            </a>
+          </div>
+        )}
+      
+      <div className="flex-1 flex items-center gap-8 border-l-2 border-r-2 border-l-gray-200 border-r-gray-200 bg-white">
+        <div
+          className={`flex-1 transition-all duration-700 ${
+            isHomeVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
+          <div className="relative flex items-center md:pl-8 pl-4">
+            <TopBottomBorder />
+
+            <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line">
+              <div className="absolute -right-0.5 h-16 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              <div className="absolute -left-0.5 h-16 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+
+              <div className=" w-2 h-2 bg-primary rounded-full"></div>
+              <p className=" text-primary font-medium lg:text-sm md:text-xs text-[10px]">
+                AVAILABLE FOR WORK
+              </p>
+            </div>
+          </div>
+          <div className=" flex md:mb-8 mb-6">
+            <div className="max-w-min ">
+              <div className=" md:pl-8 md:py-5 pl-4 py-4">
+                <h1 className="font-thin lg:text-[5.4rem] md:text-7xl text-[33px] text-secondary leading-none text-nowrap">
+                  Hi, I'm an aspiring
+                </h1>
+                <h1 className="font-semibold lg:text-[6rem] md:text-[5rem] text-4xl text-primary leading-none text-nowrap">
+                  Web Developer
+                </h1>
+              </div>
+              <div className="relative md:pl-8 md:py-5 pl-4 py-4">
+                <TopBottomBorder />
+
+                <p className="lg:text-base sm:text-sm text-[11px] text-justify text-secondary leading-relaxed font-light">
+                  I'm a fresh IT graduate aspiring to become a web developer,
+                  eager to collaborate on real-world projects and grow through
+                  practical development experience.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex-1 xl:block hidden">
+              <div
+                className={`flex-1 flex justify-center transition-all duration-700 px-4 ${
+                  isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
+                }`}
+              >
+                <div className="relative w-[314px]" style={{ perspective: '1000px' }}>
+                  
+                  <div className="absolute top-0 left-0 w-full h-full rounded-2xl z-0 bg-tertiary border border-tertiary"></div>
+                  <div className="absolute inset-3 border-dashed border border-line rounded-xl z-10"></div>
+                  
+                  <div
+                    className="relative w-full h-full rounded-2xl border border-line bg-gradient-to-t from-gray-100 to-gray-200 overflow-hidden shadow-lg z-10 transition-transform duration-700"
+                    style={{
+                      transform: isHovered
+                        ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
+                        : 'rotateX(22deg) rotateY(-5deg) rotateZ(15deg)',
+                    }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
+                    
+                    <img
+                      className="w-full h-full object-cover"
+                      src={profilePic}
+                      alt="Profile Picture"
+                    />
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="relative flex gap-4 md:pl-8 pl-4 lg:text-base sm:text-sm text-[11px]">
+            <TopBottomBorder />
+
+            <a
+              href="#projects"
+              className="relative flex items-center bg-primary text-white sm:px-7 sm:py-2 px-5 py-1.5 rounded-full hover:bg-button transition-colors duration-300"
+            >
+              <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              View My Work
+            </a>
+            <a
+              href="#about"
+              className="relative flex items-center border border-primary text-primary sm:px-7 sm:py-2 px-5 py-1.5 rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
+            >
+              <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              About Me
+            </a>
+          </div>
+        </div>
+
+
+
+
+
+        {/* <div className={`flex flex-col justify-center gap-4 transition-all duration-700 px-4 mr-4 bg-white ${ isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'}`}>   
+            <div className='flex gap-4'>
+              <div className=' w-44 h-64 flex flex-col gap-4'>
+                <div className=' h-24 relative overflow-hidden bg-white rounded-lg p-4 flex flex-col shadow'>
+                  <h1 className='z-20 text-[1.4rem] font-normal'>Ronald Seron</h1>
+                  <p className='z-20 text-xs -mt-1 font-light'>Kabankalan City, Negros Occidental</p>
+                </div>
+                <div className=' flex-1 bg-white rounded-lg shadow'></div>
+              </div>
+              <div className=' w-64 h-64 bg-gradient-to-t from-gray-100 to-gray-300 rounded-lg overflow-hidden shadow'>
+                <img className=' w-full' src={profilePic} alt="Profile Picture" />
+              </div>
+            </div>
+
+            <div className='flex gap-4'>
+              <div className='flex-1 bg-gradient-to-br from-purple-300 to-purple-200 h-32 rounded-lg shadow'></div>
+              <div className='w-40 bg-white h-32 rounded-lg shadow flex flex-col items-center justify-evenly'>
+                <div className='w-full flex items-center justify-evenly'>
+                  <a href="">
+                    <img className='w-8' src={github} alt="" />
+                  </a>
+                  <a href="">
+                    <img className='w-8' src={gmail} alt="" />
+                  </a>
+                </div>
+                <div className='w-full flex items-center justify-evenly'>
+                  <a href="">
+                    <img className='w-8' src={gmail} alt="" />
+                  </a>
+                  <a href="">
+                    <img className='w-8' src={github} alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div> */}
+      </div>
+
+    </div>
+  );
+};
+
+export default Home;

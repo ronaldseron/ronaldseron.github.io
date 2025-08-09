@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fefefe;
+  --color-background-border: #fbfbfb;
+  --color-primary: #222222;
+  --color-secondary: #4a5565;
+  --color-tertiary: #F8F8F8F8;
+  --color-tertiary-shade: #fcfcfc;
+  --color-white: #FFFFFF;
+  --color-button: #2c2c2c;
+
+  --max-width-standard: 1540px;
+
+  --border-color-line: #e5e7eb;
+}
+
+html {
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.lines {
+  background: url(./assets/diagonal.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-color: var(--color-tertiary); */
+}
+
+.pic {
+  background: url(./assets/diagonal.svg);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.pic:hover {
+  transform: rotateX('0deg') rotateY('0deg') rotateZ('0deg') ;
+}
+
+
+/* .logoName {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-primary), var(--color-gray-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+  /* will-change: auto; release memory after animation */
+}
+
+
+
+
+/* Custom Loading Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up.delay-300 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
