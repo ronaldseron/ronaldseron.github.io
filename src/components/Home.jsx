@@ -21,7 +21,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   return (
     <div
       id="hero"
-      className="h-dvh max-w-standard w-full flex flex-col justify-center mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x-2 border-line bg-transparent z-10 relative"
+      className="h-dvh max-w-standard w-full flex flex-col justify-center mx-auto lg:px-12 md:px-8 sm:px-4 px-3 mt-4 border-x-2 border-line bg-transparent z-10 relative"
     >
 
       {/* Mobilie Menu Bar */}
@@ -55,25 +55,25 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               <div className="absolute -left-0.5 h-16 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
 
               <div className=" w-2 h-2 bg-primary rounded-full"></div>
-              <p className=" text-primary font-medium lg:text-sm md:text-xs text-[10px]">
+              <p className=" text-primary font-medium lg:text-sm text-xs">
                 AVAILABLE FOR WORK
               </p>
             </div>
           </div>
-          <div className=" flex md:mb-8 mb-6">
+          <div className=" flex md:mb-8 mb-0">
             <div className="max-w-min ">
               <div className=" md:pl-8 md:py-5 pl-4 py-4">
-                <h1 className="font-thin lg:text-[5.4rem] md:text-7xl text-[33px] text-secondary leading-none text-nowrap">
+                <h1 className="sm:font-thin font-light lg:text-[5.4rem] md:text-7xl text-[33px] text-secondary leading-none text-nowrap sm:mb-0 mb-2">
                   Hi, I'm an aspiring
                 </h1>
-                <h1 className="font-semibold lg:text-[6rem] md:text-[5rem] text-4xl text-primary leading-none text-nowrap">
+                <h1 className="font-semibold lg:text-[6rem] md:text-[5rem] text-[37px] text-primary leading-none text-nowrap">
                   Web Developer
                 </h1>
               </div>
               <div className="relative md:pl-8 md:py-5 pl-4 py-4">
                 <TopBottomBorder />
 
-                <p className="lg:text-base sm:text-sm text-[11px] text-justify text-secondary leading-relaxed font-light">
+                <p className="lg:text-base sm:text-sm text-xs text-justify text-secondary leading-relaxed font-light">
                   I'm a fresh IT graduate aspiring to become a web developer,
                   eager to collaborate on real-world projects and grow through
                   practical development experience.
@@ -115,27 +115,64 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               </div>
             </div>
           </div>
-          <div className="relative flex gap-4 md:pl-8 pl-4 lg:text-base sm:text-sm text-[11px]">
-            <TopBottomBorder />
+          <div className="relative flex sm:flex-row flex-col gap-4 md:pl-8 px-4 lg:text-base sm:text-sm text-xs font-medium mb-6 sm:py-0 py-4">
+          <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
+          <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
 
             <a
               href="#projects"
-              className="relative flex items-center bg-primary text-white sm:px-7 sm:py-2 px-5 py-1.5 rounded-full hover:bg-button transition-colors duration-300"
+              className="relative flex items-center justify-center bg-primary text-white sm:px-7 sm:py-2 px-5 py-2 rounded-full hover:bg-button transition-colors duration-300"
             >
-              <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
-              <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
+              <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
               View My Work
             </a>
             <a
               href="#about"
-              className="relative flex items-center border border-primary text-primary sm:px-7 sm:py-2 px-5 py-1.5 rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
+              className="relative flex items-center justify-center border border-primary text-primary sm:px-7 sm:py-2 px-5 py-2 rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
             >
-              <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
-              <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
+              <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
               About Me
             </a>
           </div>
+{/* 
+            <div className="  sm:hidden block">
+              <div
+                className={`flex-1 flex justify-center transition-all duration-700 px-4 ${
+                  isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
+                }`}
+              >
+                <div className="relative w-[150px]" style={{ perspective: '1000px' }}>
+                  
+                  <div className="absolute top-0 left-0 w-full h-full rounded-2xl z-0 bg-tertiary border border-tertiary"></div>
+                  <div className="absolute inset-3 border-dashed border border-line rounded-xl z-10"></div>
+                  
+                  <div
+                    className="relative w-full h-full rounded-2xl border border-line bg-gradient-to-t from-gray-100 to-gray-200 overflow-hidden shadow-lg z-10 transition-transform duration-700"
+                    style={{
+                      transform: isHovered
+                        ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
+                        : 'rotateX(22deg) rotateY(-5deg) rotateZ(15deg)',
+                    }}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
+                    
+                    <img
+                      className="w-full h-full object-cover"
+                      src={profilePic}
+                      alt="Profile Picture"
+                    />
+                  </div>
+
+
+                </div>
+              </div>
+            </div> */}
         </div>
+
+
 
 
 
@@ -178,6 +215,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
             </div>
           </div> */}
       </div>
+
 
     </div>
   );
