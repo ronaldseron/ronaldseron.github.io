@@ -6,14 +6,14 @@
   --color-background-border: #fbfbfb;
   --color-primary: #222222;
   --color-secondary: #4a5565;
-  --color-tertiary: #F8F8F8F8;
+  --color-tertiary: #f2f3f3;
   --color-tertiary-shade: #fcfcfc;
   --color-white: #FFFFFF;
   --color-button: #2c2c2c;
 
   --max-width-standard: 1540px;
 
-  --border-color-line: #e5e7eb;
+  --border-color-line: #e6e7e7;
 }
 
 html {
@@ -35,9 +35,6 @@ html {
   background-color: white;
 }
 
-.pic:hover {
-  transform: rotateX('0deg') rotateY('0deg') rotateZ('0deg') ;
-}
 
 
 /* .logoName {

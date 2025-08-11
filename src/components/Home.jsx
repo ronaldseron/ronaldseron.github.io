@@ -21,7 +21,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   return (
     <div
       id="hero"
-      className="h-dvh max-w-standard w-full flex flex-col justify-center mx-auto lg:px-12 md:px-8 sm:px-4 px-3 mt-4 border-x-2 border-line bg-transparent z-10 relative"
+      className="h-dvh max-w-standard w-full flex flex-col justify-center mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line bg-transparent z-10 relative"
     >
 
       {/* Mobilie Menu Bar */}
@@ -39,7 +39,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           </div>
         )}
       
-      <div className="flex-1 flex items-center gap-8 border-l-2 border-r-2 border-l-gray-200 border-r-gray-200 bg-white">
+      <div className="flex-1 flex items-center gap-8 border-l border-r border-l-line border-r-line bg-white">
         <div
           className={`flex-1 transition-all duration-700 ${
             isHomeVisible
@@ -47,22 +47,22 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               : "opacity-0 -translate-x-full"
           }`}
         >
-          <div className="relative flex items-center md:pl-8 pl-4">
+          <div className="relative flex sm:justify-start justify-center items-center md:px-8 px-4">
             <TopBottomBorder />
 
-            <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line">
-              <div className="absolute -right-0.5 h-16 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
-              <div className="absolute -left-0.5 h-16 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+            <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
+              <div className="absolute -right-0.5 sm:h-16 h-12 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
+              <div className="absolute -left-0.5 sm:h-16 h-12 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
 
               <div className=" w-2 h-2 bg-primary rounded-full"></div>
-              <p className=" text-primary font-medium lg:text-sm text-xs">
+              <p className=" text-primary font-medium lg:text-sm text-[11px]">
                 AVAILABLE FOR WORK
               </p>
             </div>
           </div>
-          <div className=" flex md:mb-8 mb-0">
+          <div className=" flex sm:justify-start justify-center md:mb-8 mb-0">
             <div className="max-w-min ">
-              <div className=" md:pl-8 md:py-5 pl-4 py-4">
+              <div className=" md:pl-8 md:py-5 px-4 py-4 text-center">
                 <h1 className="sm:font-thin font-light lg:text-[5.4rem] md:text-7xl text-[33px] text-secondary leading-none text-nowrap sm:mb-0 mb-2">
                   Hi, I'm an aspiring
                 </h1>
@@ -70,10 +70,10 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                   Web Developer
                 </h1>
               </div>
-              <div className="relative md:pl-8 md:py-5 pl-4 py-4">
+              <div className="relative md:pl-8 md:py-5 px-4 py-4">
                 <TopBottomBorder />
 
-                <p className="lg:text-base sm:text-sm text-xs text-justify text-secondary leading-relaxed font-light">
+                <p className="lg:text-base sm:text-sm text-xs sm:text-justify text-center text-secondary leading-relaxed font-light">
                   I'm a fresh IT graduate aspiring to become a web developer,
                   eager to collaborate on real-world projects and grow through
                   practical development experience.
@@ -83,13 +83,13 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
             <div className="flex-1 xl:block hidden">
               <div
-                className={`flex-1 flex justify-center transition-all duration-700 px-4 ${
+                className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 ${
                   isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                 }`}
               >
                 <div className="relative w-[314px]" style={{ perspective: '1000px' }}>
                   
-                  <div className="absolute top-0 left-0 w-full h-full rounded-2xl z-0 bg-tertiary border border-tertiary"></div>
+                  <div className="absolute pic top-0 left-0 w-full h-full rounded-2xl z-0 bg-tertiary border border-line"></div>
                   <div className="absolute inset-3 border-dashed border border-line rounded-xl z-10"></div>
                   
                   <div
@@ -115,7 +115,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               </div>
             </div>
           </div>
-          <div className="relative flex sm:flex-row flex-col gap-4 md:pl-8 px-4 lg:text-base sm:text-sm text-xs font-medium mb-6 sm:py-0 py-4">
+          <div className="relative flex sm:flex-row flex-col sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base sm:text-sm text-xs font-medium mb-6 sm:py-0 py-4">
           <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
           <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
 

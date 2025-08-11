@@ -85,7 +85,7 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               <h1 className='text-lg font-semibold text-primary/90'>ONALDSERON</h1>
           </a>
           <button id='menu-bar' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <i class='bx bx-dots-vertical-rounded text-xl -mr-2 mt-1'  ></i> 
+            <i className='bx bx-dots-vertical-rounded text-xl -mr-2 mt-1'  ></i> 
 
           </button>
         </div>

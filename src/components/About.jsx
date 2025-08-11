@@ -45,14 +45,15 @@ const About = () => {
   return (
     <div
       id="about"
-      className="max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x-2 border-line bg-transparent"
+      className="max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line bg-transparent"
     >
       <div className="flex items-start gap-16">
-        <div className="flex-1 py-16 border-x-2 border-line bg-white">
+        <div className="flex-1 py-24 border-x border-line bg-white">
           {/* Heading */}
           <div className="flex flex-col justify-center items-center md:gap-5 gap-3 md:mb-10 mb-5">
             <div className="relative flex items-center justify-center bg-background">
-              <Border />
+              {/* <Border /> */}
+              <ExtendLine />
               <div className="flex-1 flex sm:gap-2 gap-1 items-center justify-center bg-gray-100 sm:px-2 sm:py-1 px-1.5 py-0.5 rounded-full border border-line">
                 <div className="lg:w-2.5 lg:h-2.5 w-2 h-2 bg-primary rounded-full"></div>
                 <p className="text-primary font-semibold lg:text-sm sm:text-xs text-[11px]">About</p>
@@ -67,12 +68,12 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div className="relative flex flex-col gap-2 bg-gray-100 p-2">
+          <div className="relative flex sm:flex-row flex-col gap-2 bg-tertiary p-2">
             <ExtendLine />
 
             {/* My Story & Skills */}
             <div ref={fadeRef1} className="flex-1 flex md:flex-row flex-col gap-2 fade-up will-change-transform will-change-opacity">
-              <div className="flex-1 h-auto bg-white border border-line rounded-2xl md:p-8 p-4">
+              <div className="flex-1 h-auto bg-white outline outline-gray-950/5 rounded-2xl md:p-8 p-4">
                 <div className="md:mb-6 mb-3 flex gap-4 items-center">
                   <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                   <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
@@ -102,7 +103,7 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="flex-1 bg-white border border-line rounded-2xl md:p-8 p-4">
+              {/* <div className="flex-1 bg-white border border-line rounded-2xl md:p-8 p-4">
                 <div className="md:mb-6 mb-3 flex gap-4 items-center">
                   <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                   <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
@@ -128,11 +129,11 @@ const About = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* What I Bring & Education */}
-            <div ref={fadeRef2} className="flex-1 flex md:flex-row flex-col gap-2 fade-up will-change-transform will-change-opacity">
+            <div ref={fadeRef2} className="flex-1 flex flex-col gap-2 fade-up will-change-transform will-change-opacity">
               <div className="flex-1 bg-white border border-line rounded-2xl md:p-8 p-4">
                 <div className="md:mb-6 mb-3 flex gap-4 items-center">
                   <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
@@ -158,7 +159,7 @@ const About = () => {
                     Education
                   </h3>
                 </div>
-                <div className="flex justify-center items-center lg:text-base sm:text-sm text-[11px]">
+                <div className="flex items-center lg:text-base sm:text-sm text-[11px]">
                   <div>
                     <h5 className="font-medium text-primary">
                       Bachelor of Science in Information Technology

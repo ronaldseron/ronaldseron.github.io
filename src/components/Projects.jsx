@@ -79,15 +79,15 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className=" max-w-standard mx-auto px-12 border-x-2 border-gray-300 bg-transparent sm:block hidden"
+      className=" max-w-standard mx-auto px-12 border-x border-gray-300 bg-transparent sm:block hidden"
     >
-      <div className="flex items-start gap-16 py-16 px-6 bg-background border-x-2 border-gray-200">
+      <div className="flex items-start gap-16 py-24 bg-white border-x border-gray-200">
         <div className="flex-1">
-          <div className=" flex flex-col justify-center items-center gap-5 mb-10">
-            <div className="relative flex items-center justify-center bg-background">
-              <Border />
-
-              <div className="flex-1 flex gap-2 items-center justify-center bg-gray-100 px-2 py-1 rounded-full border border-line z-10">
+          <div className=" flex flex-col justify-center items-center gap-5">
+            <div className="relative flex items-center justify-center">
+              {/* <Border /> */}
+              <ExtendLine />
+              <div className="flex-1 flex gap-2 items-center justify-center bg-tertiary px-2 py-1 rounded-full border border-line z-10">
                 <div className=" w-2.5 h-2.5 bg-primary rounded-full"></div>
                 <p className=" text-primary font-semibold text-sm">Projects</p>
               </div>
@@ -102,17 +102,20 @@ const Projects = () => {
             </div>
           </div>
 
-          <div ref={fadeRef1} className="flex gap-8 fade-up">
+          <div ref={fadeRef1} className="flex gap-4 fade-up p-10">
             {projects.map((project, index) => (
-              <div key={index} className=" bg-white p-4 rounded-lg shadow-sm">
-                <img className="rounded-lg" src={project.image} alt="" />
+              <div key={index} className=" rounded-lg">
+                <div className="relative">
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent rounded-lg"></div> */}
+                  <img className=" rounded-lg" src={project.image} alt="" />
+                </div>
                 <div className="py-2">
                   <h3 className="text-base font-semibold text-primary mb-4">
                     {project.title}
                   </h3>
                   {/* <p className="text-secondary text-sm mb-6 leading-relaxed">{project.description}</p> */}
 
-                  <div className="mb-6">
+                  {/* <div className="mb-6">
                     <h4 className="text-sm font-medium text-primary mb-3">
                       Technologies Used
                     </h4>
@@ -152,7 +155,7 @@ const Projects = () => {
                     >
                       Live Demo
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
