@@ -61,7 +61,7 @@ const About = () => {
             </div>
             <div className="relative md:py-5 py-3">
               <ExtendLine />
-              <h2 className="lg:text-5xl md:text-4xl sm:text-2xl text-xl font-medium text-primary">
+              <h2 className="lg:text-5xl md:text-4xl text-3xl font-medium text-primary">
                 Quick Introduction
               </h2>
             </div>
