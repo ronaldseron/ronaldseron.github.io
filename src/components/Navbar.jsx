@@ -28,7 +28,7 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 md:px-16 px-4 transition-all duration-700 ease-out bg-white/90 backdrop-blur-sm border-b-2 border-gray-200  ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 md:px-16 px-4 transition-all duration-700 ease-out bg-white/90 backdrop-blur-sm border-b border-gray-200  ${
       isNavbarVisible 
         ? 'opacity-100 translate-y-0' 
         : 'opacity-0 -translate-y-full'
@@ -36,7 +36,7 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
       <div className={` max-w-standard mx-auto`}>
 
         {/* Desktop Size NavBar */}
-        <div className="md:flex hidden items-center justify-between gap-12 px-6 py-4">
+        <div className="lg:flex hidden items-center justify-between gap-12 px-6 py-4">
           <div className="font-medium text-xl flex items-center gap-12">
             <a href="#hero" className={`transition-colors duration-300 ${
               isScrolled ? 'text-primary' : 'text-primary'
@@ -77,7 +77,7 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
         </div>
 
         {/* Mobile Size NavBar */}
-        <div className='md:hidden flex items-center justify-between px-4 py-4'>
+        <div className='lg:hidden flex items-center justify-between px-4 py-4'>
           <a href="#hero" className={`transition-colors duration-300 flex items-center gap-0.5 ${
             isScrolled ? 'text-primary' : 'text-primary'
           }`}>
