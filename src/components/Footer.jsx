@@ -31,7 +31,7 @@ const Footer = () => {
                 href="mailto:ronald@gmail.com" 
                 className="hover:text-white transition-colors duration-300 text-lg"
               >
-                📧 ronald@gmail.com
+                📧 seronronalddalida@gmail.com
               </a>
               <a 
                 href="https://linkedin.com/in/yourprofile" 
@@ -58,7 +58,7 @@ const Footer = () => {
         
         <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-white/60 md:text-sm text-xs">
-            © 2024 Ronald. Built with React.js and Tailwind CSS. 
+            © 2025 Ronald. Built with React.js and Tailwind CSS. 
             <br />
             Designed and developed with passion for creating great web experiences.
           </p>
