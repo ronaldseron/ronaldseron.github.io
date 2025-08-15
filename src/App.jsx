@@ -50,6 +50,9 @@ function App() {
             <p className="text-lg text-secondary animate-fade-in-up delay-300">
               Web Developer
             </p>
+            <p className="text-lg text-secondary animate-fade-in-up delay-300">
+              "Live Preview (Work in Progress)"
+            </p>
           </div>
         </div>
       </div>
