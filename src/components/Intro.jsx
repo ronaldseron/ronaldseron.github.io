@@ -14,7 +14,7 @@ const Intro = () => {
                         <h1 className=''>(Email me to Collaborate)</h1>
                     </div>
                     <div className='md:text-5xl text-3xl sm:text-center text-start font-medium max-w-5xl text-primary'>
-                        <h1>Fresh Graduate with Proven Web Dev Skills, Ready to Compete and Collaborate!</h1>
+                        <h1>Fresh Graduate with Proven Web Development Skills, Ready to Compete and Collaborate!</h1>
                     </div>
                     <div className='md:text-base text-sm sm:text-center text-start max-w-2xl text-secondary'>
                         <p>With hands-on freelancing experience and a passion for clean, scalable code, I’m prepared to adapt fast and contribute immediately.</p>
