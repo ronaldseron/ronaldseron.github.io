@@ -41,7 +41,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
       
       <div className="relative flex-1 md:py-34 py-24 isolate flex items-center gap-8 border-l border-r border-l-line border-r-line bg-white">
 
-            <div className="absolute adjust-pic:right-20 right-10 adj-pic-size:bottom-20 hide-pic:block hidden bottom-10 z-20">
+            <div className="absolute adjust-pic:right-15 right-10 adj-pic-size:bottom-15 hide-pic:block hidden bottom-10 z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -96,8 +96,8 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           </div>
           <div className=" flex sm:justify-start justify-center md:mb-8 mb-0">
             <div className="">
-              <div className="max-w-5xl md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5.3rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-start font-base text-primary z-50">
-                <h1>Emerging Web Dev Ready to Compete and Collaborate.</h1>
+              <div className="max-w-6xl md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5.3rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-start font-base text-primary z-50">
+                <h1>Emerging Web Dev, Ready to Compete and Collaborate.</h1>
               </div>
               <div className="relative md:pl-8 md:py-5 px-4 py-4">
                 <TopBottomBorder />
