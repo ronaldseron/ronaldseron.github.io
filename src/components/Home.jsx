@@ -1,7 +1,4 @@
 import profilePic from "../assets/profile.png";
-import eye from "../assets/eye.svg";
-import github from "../assets/github.png";
-import gmail from "../assets/gmail.png";
 import TopBottomBorder from "./TopBottomBorder";
 import { useEffect, useState } from "react";
 
@@ -89,7 +86,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               <div className="absolute -left-0.5 sm:h-16 h-12 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
 
               <div className=" w-2 h-2 bg-primary rounded-full"></div>
-              <p className=" text-primary font-medium lg:text-sm text-[11px]">
+              <p className=" text-primary font-medium lg:text-sm text-xs">
                 AVAILABLE FOR WORK
               </p>
             </div>
@@ -102,7 +99,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               <div className="relative md:pl-8 md:py-5 px-4 py-4">
                 <TopBottomBorder />
 
-                <p className="max-w-2xl lg:text-lg sm:text-sm text-xs text-secondary leading-relaxed font-light">
+                <p className="max-w-2xl lg:text-xl sm:text-lg text-sm text-secondary leading-relaxed font-light">
                   With hands-on freelancing experience and a passion for Web Development, I’m prepared to adapt fast and contribute immediately.
                 </p>
               </div>
@@ -142,7 +139,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               </div>
             </div> */}
           </div>
-          <div className="relative flex sm:flex-row flex-col sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base sm:text-sm text-xs font-medium mb-6 sm:py-0 py-4">
+          <div className="relative flex sm:flex-row flex-col sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base text-sm mb-6 sm:py-0 py-4">
           <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
           <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
 
