@@ -68,12 +68,12 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div className="relative flex sm:flex-row flex-col gap-2 bg-tertiary p-2">
+          <div className="relative flex sm:flex-row flex-col gap-1 bg-tertiary p-1">
             <ExtendLine />
 
             {/* My Story & Skills */}
             <div ref={fadeRef1} className="flex-1 flex md:flex-row flex-col gap-2 fade-up will-change-transform will-change-opacity">
-              <div className="flex-1 h-auto bg-white outline outline-gray-950/5 rounded-2xl md:p-8 p-4">
+              <div className="flex-1 h-auto bg-white outline outline-gray-950/5 rounded-sm md:p-8 p-4">
                 <div className="md:mb-6 mb-3 flex gap-4 items-center">
                   <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                   <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
@@ -133,8 +133,8 @@ const About = () => {
             </div>
 
             {/* What I Bring & Education */}
-            <div ref={fadeRef2} className="flex-1 flex flex-col gap-2 fade-up will-change-transform will-change-opacity">
-              <div className="flex-1 bg-white border border-line rounded-2xl md:p-8 p-4">
+            <div ref={fadeRef2} className="flex-1 flex flex-col gap-1 fade-up will-change-transform will-change-opacity">
+              <div className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                 <div className="md:mb-6 mb-3 flex gap-4 items-center">
                   <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                   <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
@@ -152,7 +152,7 @@ const About = () => {
                 </ul>
               </div>
 
-              <div className="flex-1 bg-white border border-line rounded-2xl md:p-8 p-4">
+              <div className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                 <div className="md:mb-6 mb-3 flex gap-4 items-center">
                   <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                   <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
