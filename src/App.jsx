@@ -4,6 +4,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
+import Skills from './components/Skills';
 
 import PortfolioLogo from './assets/PortfolioLogo.svg';
 import { useState, useEffect } from 'react';
@@ -73,7 +74,7 @@ function App() {
         <section id='hero'><Home showContent={showContent} isLoading={isLoading} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/></section>
         <section><Intro /></section>
         <section id='about'><About /></section>
-        <section><Intro /></section>
+        <section id='skills'><Skills /></section>
         <section id='projects'><Projects /></section>
       </main>
       <Footer />
