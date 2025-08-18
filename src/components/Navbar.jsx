@@ -77,7 +77,7 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
         </div>
 
         {/* Mobile Size NavBar */}
-        <div className='lg:hidden flex items-center justify-between px-4 py-4'>
+        <div className='lg:hidden flex items-center justify-between px-4 py-3.5'>
           <a href="#hero" className={`transition-colors duration-300 flex items-center gap-0.5 ${
             isScrolled ? 'text-primary' : 'text-primary'
           }`}>
