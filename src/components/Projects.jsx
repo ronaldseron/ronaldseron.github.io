@@ -11,7 +11,6 @@ import nstpDash from "../assets/projects/nstp-dash.png";
 import nstpLts from "../assets/projects/nstp-lts.png";
 import nstpRotc from "../assets/projects/nstp-rotc.png";
 import nstpStudents from "../assets/projects/nstp-students.png";
-import Border from "./Borders";
 import ExtendLine from "./ExtendLine";
 import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
 
