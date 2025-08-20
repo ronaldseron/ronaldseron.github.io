@@ -13,7 +13,7 @@ const frontendLogo = [
     { image: javascript, name: "JavaScript" },
     { image: react, name: "React" },
     { image: vue, name: "Vue" },
-    { image: tailwind, name: "TailwindCSS" },
+    { image: tailwind, name: "Tailwind CSS" },
     { image: bootstrap, name: "Bootstrap" },
     { image: vitejs, name: "Vite" },
 ];
