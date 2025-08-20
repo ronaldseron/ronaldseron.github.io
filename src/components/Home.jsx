@@ -38,17 +38,44 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
       
       <div className="relative flex-1 md:py-34 py-24 isolate flex items-center gap-8 border-l border-r border-l-line border-r-line bg-white">
 
-            <div className="absolute adjust-pic:right-15 right-10 adj-pic-size:bottom-15 hide-pic:block hidden bottom-10 z-20">
+            {/* <div className="absolute adjust-pic:left-10 left-10 adj-pic-size:bottom-10 hide-pic:block hidden bottom-10 z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                     }`}
                 >
-                    <div className="relative adjust-pic:w-[310px] w-[270px] bg-transparent" style={{ perspective: '1000px' }}>
+                    <div className="relative w-[200px] bg-transparent" style={{ perspective: '1000px' }}>
                     
-                    {/* <div className="absolute pic top-0 left-0 w-full h-full rounded-2xl z-0 bg-tertiary border border-line"></div>
-                    <div className="absolute inset-3 border-dashed border border-line rounded-xl z-10"></div> */}
-                    
+                    <div
+                        className="relative w-full h-full rounded-2xl border border-line bg-gradient-to-t from-gray-100 to-gray-200 overflow-hidden shadow-lg z-10 transition-transform duration-700"
+                        style={{
+                        transform: isHovered
+                            ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
+                            : 'rotateX(22deg) rotateY(20deg) rotateZ(-25deg)',
+                        }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        
+                        <img
+                        className="w-full h-full object-cover"
+                        src={profilePic}
+                        alt="Profile Picture"
+                        />
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div className="absolute adjust-pic:right-10 right-10 adj-pic-size:bottom-30 hide-pic:block hidden bottom-10 z-20">
+                <div
+                    className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
+                    isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
+                    }`}
+                >
+                    <div className="relative w-[200px] bg-transparent" style={{ perspective: '1000px' }}>
+   
                     <div
                         className="relative w-full h-full rounded-2xl border border-line bg-gradient-to-t from-gray-100 to-gray-200 overflow-hidden shadow-lg z-10 transition-transform duration-700"
                         style={{
@@ -70,7 +97,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
                     </div>
                 </div>
-            </div>
+            </div> */}
         <div
           className={`flex-1 transition-all duration-700 ${
             isHomeVisible
@@ -78,7 +105,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               : "opacity-0 -translate-x-full"
           }`}
         >
-          <div className="relative flex items-center md:px-8 px-4">
+          <div className="relative flex items-center justify-center md:px-8 px-4">
             <TopBottomBorder />
 
             <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
@@ -93,13 +120,13 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           </div>
           <div className=" flex sm:justify-start justify-center md:mb-8 mb-0">
             <div className="">
-              <div className="max-w-6xl md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5.3rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-start font-base text-primary z-50">
+              <div className=" md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5.3rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-center text-primary z-50">
                 <h1>Emerging Web Dev, Ready to Compete and Collaborate.</h1>
               </div>
-              <div className="relative md:pl-8 md:py-5 px-4 py-4">
+              <div className="relative flex justify-center text-center md:pl-8 md:py-5 px-4 py-4">
                 <TopBottomBorder />
 
-                <p className="max-w-2xl lg:text-xl sm:text-lg text-sm text-secondary leading-relaxed font-light">
+                <p className="max-w-3xl lg:text-xl sm:text-lg text-sm text-secondary leading-relaxed font-light">
                   With hands-on freelancing experience and a passion for Web Development, I’m prepared to adapt fast and contribute immediately.
                 </p>
               </div>
@@ -139,9 +166,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               </div>
             </div> */}
           </div>
-          <div className="relative flex sm:flex-row flex-col sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base text-sm mb-6 sm:py-0 py-4">
-          <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
-          <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
+          <div className="relative flex sm:flex-row flex-col justify-center sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base text-sm mb-6 sm:py-0 py-4">
+            <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
+            <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
 
             <a
               href="#projects"
