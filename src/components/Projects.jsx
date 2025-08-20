@@ -112,21 +112,21 @@ const Projects = () => {
             </div>
           </div>
 
-          <div ref={fadeRef1} className="flex lg:flex-row flex-col gap-4 fade-up sm:p-10 p-4">
+          <div ref={fadeRef1} className="flex lg:flex-row flex-col gap-1 fade-up p-1 bg-tertiary">
             {projects.map((project, index) => (
-              <div key={index} className=" rounded-lg flex-1">
-                <div className="w-full grid shadow bg-tertiary-shade rounded-2xl grid-cols-1 sm:grid-cols-2 md:gap-2 md:p-2 sm:gap-4 sm:p-4 gap-2 p-2">
+              <div key={index} className=" rounded-lg flex-1 flex flex-col gap-1">
+                <div className="w-full grid shadow bg-white rounded-sm grid-cols-1 sm:grid-cols-2 gap-1 p-1">
                   {project.images.map((image, imageIndex) => (
                     <img
                       key={imageIndex}
-                      className="rounded-lg shadow w-full h-auto object-cover"
+                      className="rounded-xs shadow w-full h-auto object-cover"
                       src={image}
                       alt=""
                     />
                   ))}
                 </div>
-                <div className="py-2">
-                  <h3 className="text-base sm:text-start text-center font-semibold text-primary mb-4">
+                <div className="p-2 shadow bg-white rounded-sm">
+                  <h3 className="text-base sm:text-start text-start font-semibold text-primary">
                     {project.title}
                   </h3>
                   {/* <p className="text-secondary text-sm mb-6 leading-relaxed">{project.description}</p> */}
