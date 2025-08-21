@@ -55,6 +55,11 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                 </a>
               </li>
               <li>
+                <a href="#skills" className="hover:text-secondary transition-colors duration-300">
+                  Skills
+                </a>
+              </li>
+              <li>
                 <a href="#projects" className="hover:text-secondary transition-colors duration-300">
                   Projects
                 </a>

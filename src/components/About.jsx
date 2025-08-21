@@ -45,12 +45,12 @@ const About = () => {
   return (
     <div
       id="about"
-      className="max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line bg-transparent"
+      className=""
     >
-      <div className="flex items-start gap-16">
-        <div className="flex-1 py-24 border-x border-line bg-white">
+      <div className="">
+        <div className="bg-white">
           {/* Heading */}
-          <div className="flex flex-col justify-center items-center md:gap-5 gap-3 md:mb-10 mb-5">
+          <div className="flex flex-col justify-center items-start md:gap-5 sm:gap-3 gap-2 sm:mb-5 mb-3 sm:px-8 px-4">
             <div className="relative flex items-center justify-center bg-background">
               {/* <Border /> */}
               <ExtendLine />
@@ -69,7 +69,7 @@ const About = () => {
 
           {/* Content */}
           <div className="relative flex sm:flex-row flex-col gap-1 bg-tertiary p-1">
-            <ExtendLine />
+            {/* <ExtendLine /> */}
 
             {/* My Story & Skills */}
             <div ref={fadeRef1} className="flex-1 flex md:flex-row flex-col gap-2 fade-up will-change-transform will-change-opacity">

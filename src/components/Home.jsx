@@ -18,7 +18,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   return (
     <div
       id="hero"
-      className=" max-w-standard w-full flex flex-col justify-center mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line bg-transparent z-10 relative"
+      className=" flex flex-col justify-center z-10 relative"
     >
 
       {/* Mobilie Menu Bar */}
@@ -36,29 +36,31 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           </div>
         )}
       
-      <div className="relative flex-1 md:py-34 py-24 isolate flex items-center gap-8 border-l border-r border-l-line border-r-line bg-white">
+      <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8 bg-white ">
 
-            {/* <div className="absolute adjust-pic:left-10 left-10 adj-pic-size:bottom-10 hide-pic:block hidden bottom-10 z-20">
+            <div className="absolute adjust-pic:right-70 right-10 adj-pic-size:top-10 hide-pic:block hidden z-10">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                     }`}
                 >
-                    <div className="relative w-[200px] bg-transparent" style={{ perspective: '1000px' }}>
-                    
+                    <div className="relative w-[140px] bg-transparent" style={{ perspective: '1000px' }}>
+   
                     <div
-                        className="relative w-full h-full rounded-2xl border border-line bg-gradient-to-t from-gray-100 to-gray-200 overflow-hidden shadow-lg z-10 transition-transform duration-700"
+                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
                         style={{
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
-                            : 'rotateX(22deg) rotateY(20deg) rotateZ(-25deg)',
+                            : 'rotateX(25deg) rotateY(-25deg) rotateZ(5deg)',
                         }}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
                         
+                        {/* <div className="absolute top-10 -bottom-10 -right-10 left-10 rounded-2xl bg-black/4 -z-10"></div> */}
+
                         <img
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
                         src={profilePic}
                         alt="Profile Picture"
                         />
@@ -68,27 +70,29 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     </div>
                 </div>
             </div>
-            <div className="absolute adjust-pic:right-10 right-10 adj-pic-size:bottom-30 hide-pic:block hidden bottom-10 z-20">
+            <div className="absolute adjust-pic:right-10 right-10 adj-pic-size:top-62 top hide-pic:block hidden z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                     }`}
                 >
-                    <div className="relative w-[200px] bg-transparent" style={{ perspective: '1000px' }}>
+                    <div className="relative w-[180px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
-                        className="relative w-full h-full rounded-2xl border border-line bg-gradient-to-t from-gray-100 to-gray-200 overflow-hidden shadow-lg z-10 transition-transform duration-700"
+                        className="relative w-full h-full rounded-2xl shadow-xl  z-10 transition-transform duration-700"
                         style={{
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
-                            : 'rotateX(22deg) rotateY(-5deg) rotateZ(15deg)',
+                            : 'rotateX(25deg) rotateY(25deg) rotateZ(-25deg)',
                         }}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
+
+                        {/* <div className="absolute top-10 -bottom-10 right-10 -left-10 rounded-2xl bg-black/4 -z-10"></div> */}
                         
                         <img
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
                         src={profilePic}
                         alt="Profile Picture"
                         />
@@ -97,15 +101,46 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
                     </div>
                 </div>
-            </div> */}
+            </div>
+            <div className="absolute adjust-pic:right-90 right-10 adj-pic-size:bottom-10 hide-pic:block hidden bottom-10 z-20">
+                <div
+                    className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
+                    isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
+                    }`}
+                >
+                    <div className="relative w-[220px] bg-transparent" style={{ perspective: '1000px' }}>
+   
+                    <div
+                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
+                        style={{
+                        transform: isHovered
+                            ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
+                            : 'rotateX(22deg) rotateY(-5deg) rotateZ(15deg)',
+                        }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        {/* <div className="absolute top-10 -bottom-10 -right-10 left-10 rounded-2xl bg-black/4 -z-10"></div> */}
+                        
+                        <img
+                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
+                        src={profilePic}
+                        alt="Profile Picture"
+                        />
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
         <div
-          className={`flex-1 transition-all duration-700 ${
+          className={`flex-1 transition-all duration-700  ${
             isHomeVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-x-full"
           }`}
         >
-          <div className="relative flex items-center justify-center md:px-8 px-4">
+          <div className="relative flex items-center justify-start md:px-8 px-4">
             <TopBottomBorder />
 
             <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
@@ -118,15 +153,15 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               </p>
             </div>
           </div>
-          <div className=" flex sm:justify-start justify-center md:mb-8 mb-0">
+          <div className=" flex sm:justify-start justify-center text-start md:mb-8 mb-0">
             <div className="">
-              <div className=" md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5.3rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-center text-primary z-50">
+              <div className=" max-w-5xl md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-primary z-50">
                 <h1>Emerging Web Dev, Ready to Compete and Collaborate.</h1>
               </div>
-              <div className="relative flex justify-center text-center md:pl-8 md:py-5 px-4 py-4">
+              <div className="relative md:pl-8 md:py-5 px-4 py-4">
                 <TopBottomBorder />
 
-                <p className="max-w-3xl lg:text-xl sm:text-lg text-sm text-secondary leading-relaxed font-light">
+                <p className="max-w-2xl lg:text-xl sm:text-lg text-sm text-secondary tracking-tight font-light">
                   With hands-on freelancing experience and a passion for Web Development, I’m prepared to adapt fast and contribute immediately.
                 </p>
               </div>
@@ -166,7 +201,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               </div>
             </div> */}
           </div>
-          <div className="relative flex sm:flex-row flex-col justify-center sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base text-sm mb-6 sm:py-0 py-4">
+          <div className="relative flex sm:flex-row flex-col sm:gap-8 gap-4 md:pl-8 px-4 lg:text-base text-sm mb-6 sm:py-0 py-4">
             <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
             <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
 

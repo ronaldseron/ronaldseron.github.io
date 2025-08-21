@@ -89,11 +89,11 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className=" max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line bg-transparent"
+      className=" "
     >
-      <div className="flex items-start gap-16 py-24 bg-white border-x border-line">
-        <div className="flex-1">
-          <div className=" flex flex-col justify-center items-center gap-5">
+      <div className=" ">
+        <div className=" ">
+          <div className=" flex flex-col justify-center items-start md:gap-5 sm:gap-3 gap-2 sm:mb-5 mb-3 sm:px-8 px-4">
             <div className="relative flex items-center justify-center">
               {/* <Border /> */}
               <ExtendLine />
