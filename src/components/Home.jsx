@@ -38,13 +38,13 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
       
       <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8 bg-white ">
 
-            <div className="absolute adjust-pic:right-70 right-10 adj-pic-size:top-10 hide-pic:block hidden z-10">
+            <div className="absolute adjust-pic:right-60 right-10 adj-pic-size:top-10 hide-pic:block hidden z-10">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                     }`}
                 >
-                    <div className="relative w-[140px] bg-transparent" style={{ perspective: '1000px' }}>
+                    <div className="relative w-[100px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
                         className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
@@ -76,7 +76,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                     }`}
                 >
-                    <div className="relative w-[180px] bg-transparent" style={{ perspective: '1000px' }}>
+                    <div className="relative w-[140px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
                         className="relative w-full h-full rounded-2xl shadow-xl  z-10 transition-transform duration-700"
@@ -108,7 +108,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
                     }`}
                 >
-                    <div className="relative w-[220px] bg-transparent" style={{ perspective: '1000px' }}>
+                    <div className="relative w-[180px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
                         className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
@@ -116,6 +116,37 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
                             : 'rotateX(22deg) rotateY(-5deg) rotateZ(15deg)',
+                        }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        {/* <div className="absolute top-10 -bottom-10 -right-10 left-10 rounded-2xl bg-black/4 -z-10"></div> */}
+                        
+                        <img
+                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
+                        src={profilePic}
+                        alt="Profile Picture"
+                        />
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div className="absolute adjust-pic:left-70 left-10 adj-pic-size:-bottom-30 hide-pic:block hidden -bottom-10 z-20">
+                <div
+                    className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
+                    isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
+                    }`}
+                >
+                    <div className="relative w-[220px] bg-transparent" style={{ perspective: '1000px' }}>
+   
+                    <div
+                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
+                        style={{
+                        transform: isHovered
+                            ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
+                            : 'rotateX(22deg) rotateY(-5deg) rotateZ(5deg)',
                         }}
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
