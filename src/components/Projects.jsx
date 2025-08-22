@@ -42,7 +42,8 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#",
-      images: [nstpDash, nstpStudents, nstpLts, nstpRotc],
+      images: [nstpDash],
+    //   images: [nstpDash, nstpStudents, nstpLts, nstpRotc],
     },
     {
       title: "Student Academic Performance Tracker",
@@ -58,7 +59,8 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#",
-      images: [sapt, saptDash, choose, record],
+      images: [sapt],
+    //   images: [sapt, saptDash, choose, record],
     },
     {
       title: "Web-based CSF and Evaluation System",
@@ -73,7 +75,8 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#",
-      images: [evalDash, evalReport, evalTraining, evalUser],
+      images: [evalDash],
+    //   images: [evalDash, evalReport, evalTraining, evalUser],
     },
     // {
     //   title: "Portfolio Website",
@@ -93,39 +96,44 @@ const Projects = () => {
     >
       <div className=" ">
         <div className=" ">
-          <div className=" flex flex-col justify-center items-start md:gap-5 sm:gap-3 gap-2 sm:mb-5 mb-3 sm:px-8 px-4">
-            <div className="relative flex items-center justify-center">
-              {/* <Border /> */}
-              <ExtendLine />
-              <div className="flex-1 flex gap-2 items-center justify-center bg-tertiary px-2 py-1 rounded-full border border-line z-10">
-                <div className=" w-2.5 h-2.5 bg-primary rounded-full"></div>
-                <p className=" text-primary font-semibold lg:text-sm sm:text-xs text-[11px]">Projects</p>
-              </div>
-            </div>
+            <div className="flex flex-col justify-center items-start sm:px-8 px-4">
+                <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
+                    <ExtendLine />
+                    <div className=" w-2 h-2 bg-primary rounded-full"></div>
+                    <p className=" text-primary font-medium lg:text-sm text-xs">
+                        MY PROJECTS
+                    </p>
+                </div>
+                <div className="relative md:py-5 py-3">
+                    <div className="absolute top-0 bottom-0 right-0 w-screen border-b border-line"></div>
+                    <div className="absolute top-0 bottom-0 left-0 w-screen border-b border-line"></div>
 
-            <div className=" relative md:py-5 py-3">
-              <ExtendLine />
-
-              <h2 className="lg:text-5xl md:text-4xl text-3xl font-medium text-primary">
-                Latest Works
-              </h2>
+                    <h2 className="lg:text-5xl md:text-4xl text-3xl font-medium text-primary">
+                    Latest Works
+                    </h2>
+                </div>
             </div>
-          </div>
 
           <div ref={fadeRef1} className="flex lg:flex-row flex-col gap-1 fade-up p-1 bg-tertiary">
             {projects.map((project, index) => (
-              <div key={index} className=" rounded-lg flex-1 flex flex-col gap-1">
-                <div className="w-full grid shadow bg-white rounded-sm grid-cols-1 sm:grid-cols-2 gap-1 p-1">
-                  {project.images.map((image, imageIndex) => (
-                    <img
-                      key={imageIndex}
-                      className="rounded-xs shadow w-full h-auto object-cover"
-                      src={image}
-                      alt=""
-                    />
-                  ))}
+              <div key={index} className=" rounded-lg flex-1 flex flex-col gap-4 bg-white sm:p-8 p-1">
+                    {/* <div>
+                        <h1>
+                            {project.title}
+                        </h1>
+                    </div> */}
+                <div className="w-full grid shadow rounded-sm gap-1">
+                {/* <div className="w-full grid shadow rounded-sm grid-cols-1 sm:grid-cols-2 gap-1"> */}
+                    {project.images.map((image, imageIndex) => (
+                        <img
+                        key={imageIndex}
+                        className="rounded-xs shadow w-full h-auto object-cover"
+                        src={image}
+                        alt=""
+                        />
+                    ))}
                 </div>
-                <div className="p-2 shadow bg-white rounded-sm">
+                <div className="">
                   <h3 className="text-base sm:text-start text-start font-semibold text-primary">
                     {project.title}
                   </h3>

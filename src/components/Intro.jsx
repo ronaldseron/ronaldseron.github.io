@@ -19,24 +19,23 @@ const Intro = () => {
     return (
         <div className=''>
             <div className='w-full flex flex-col bg-white'>
-                <div className="flex flex-col justify-center items-start md:gap-5 sm:gap-3 gap-2 sm:mb-5 mb-3 sm:px-8 px-4">
-                    <div className="relative flex items-center justify-center">
-                        {/* <Border /> */}
+                <div className="flex flex-col justify-center items-start sm:px-8 px-4">
+                    <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
                         <ExtendLine />
-                        <div className="flex-1 flex sm:gap-2 gap-1 items-center justify-center bg-gray-100 sm:px-2 sm:py-1 px-1.5 py-0.5 rounded-full border border-line">
-                        <div className="lg:w-2.5 lg:h-2.5 w-2 h-2 bg-primary rounded-full"></div>
-                        <p className="text-primary font-semibold lg:text-sm sm:text-xs text-[11px]">Socials</p>
-                        </div>
+                        <div className=" w-2 h-2 bg-primary rounded-full"></div>
+                        <p className=" text-primary font-medium lg:text-sm text-xs">
+                            MY SOCIALS
+                        </p>
                     </div>
                     <div className="relative md:py-5 py-3">
-                        <ExtendLine />
+
                         <h2 className="lg:text-5xl md:text-4xl text-3xl font-medium text-primary">
                         Find Me Here
                         </h2>
                     </div>
                 </div>
                 <div ref={fadeRef1} className='w-full relative bg-tertiary p-1 sm:text-xl text-sm grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 font-light'>
-                    {/* <ExtendLine /> */}
+                    <ExtendLine />
                     
                     {socials.map((src, index) => (
                         <div key={index} className='flex max-sm:flex-col-reverse sm:min-w-[200px] min-w-[100px] max-sm:h-24 sm:p-8 sm:justify-between justify-center items-center gap-2 bg-white outline outline-line rounded-sm'>
