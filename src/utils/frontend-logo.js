@@ -8,14 +8,14 @@ import vitejs from '../assets/skills/frontend/vitejs.svg';
 import vue from '../assets/skills/frontend/vue.svg';
 
 const frontendLogo = [
-    { image: html5, name: "HTML5" },
-    { image: css3, name: "CSS3" },
-    { image: javascript, name: "JavaScript" },
-    { image: react, name: "React" },
-    { image: vue, name: "Vue" },
-    { image: tailwind, name: "Tailwind CSS" },
-    { image: bootstrap, name: "Bootstrap" },
-    { image: vitejs, name: "Vite" },
+    { image: html5, name: "HTML5", exp: "3yrs" },
+    { image: css3, name: "CSS3", exp: "3yrs" },
+    { image: javascript, name: "JavaScript", exp: "3yrs" },
+    { image: react, name: "React", exp: "2yrs" },
+    { image: vue, name: "Vue", exp: "2yrs" },
+    { image: tailwind, name: "Tailwind CSS", exp: "2yrs" },
+    { image: bootstrap, name: "Bootstrap", exp: "2yrs" },
+    { image: vitejs, name: "Vite", exp: "2yrs" },
 ];
 
 export default frontendLogo;
