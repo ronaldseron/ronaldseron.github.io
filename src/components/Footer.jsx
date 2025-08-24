@@ -1,10 +1,12 @@
 import React from 'react'
+import ExtendLine from './ExtendLine';
 
 const Footer = () => {
   return (
     <div className=''>
-      <div className="max-w-standard mx-auto px-12 border-x border-line">
-        <div className='bg-white w-full sm:p-8 p-4 border border-line'>
+      <div className="max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line overflow-hidden">
+        <div className='relative bg-white w-full sm:p-8 p-4 border-x border-line'>
+          <ExtendLine />
           <div className="flex flex-col sm:flex-row justify-between gap-8">
             <div>
               <h2 className="text-primary md:text-[2.5rem] text-3xl font-light mb-6 text-left">Let's Connect</h2>
@@ -60,6 +62,8 @@ const Footer = () => {
           <div className="border-t border-primary/20 mt-12 pt-8 text-center">
             <p className="text-primary/70 md:text-sm text-xs">
               © 2025 Ronald. Built with React.js and Tailwind CSS. 
+              <br />
+              Inspired with Tailwind CSS.
               <br />
               Designed and developed with passion for creating great web experiences.
             </p>

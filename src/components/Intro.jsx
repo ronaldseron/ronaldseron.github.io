@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import ExtendLine from './ExtendLine';
 import useFadeInOnScroll from '../hooks/useFadeInOnScroll';
 import github from "../assets/socials/github.png";
@@ -34,25 +34,25 @@ const Intro = () => {
                         </h2>
                     </div>
                 </div>
-                <div ref={fadeRef1} className='w-full relative bg-tertiary p-1 sm:text-xl text-sm grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 font-light'>
+                <div ref={fadeRef1} className='w-full relative bg-tertiary p-1 sm:text-xl text-sm grid bp-4:grid-cols-4 grid-cols-2 gap-1 font-light'>
                     <ExtendLine />
                     
                     {socials.map((src, index) => (
-                        <div key={index} className='flex max-sm:flex-col-reverse sm:min-w-[200px] min-w-[100px] max-sm:h-24 sm:p-8 sm:justify-between justify-center items-center gap-2 bg-white outline outline-line rounded-sm'>
+                        <div key={index} className='flex max-md:flex-col-reverse sm:min-w-[200px] min-w-[100px] max-sm:h-24 sm:p-8 sm:justify-between justify-center items-center gap-2 bg-white outline outline-line rounded-sm'>
                             <div className='sm:h-full'>
                                 <h1>{src.name}</h1>
-                                <p className='text-sm mt-2 max-sm:hidden'>{src.socialName}</p>
+                                <p className='text-sm mt-2 max-md:hidden'>{src.socialName}</p>
                             </div>
                             <img src={src.image} alt={`img-${index}`} 
-                            className='sm:w-15  w-7'/>
+                            className='md:w-15 sm:w-12  w-7'/>
                         </div>
                     ))}
-                        <div className='flex max-sm:flex-col-reverse sm:min-w-[200px] min-w-[100px] max-sm:h-24 sm:p-8 sm:justify-between justify-center items-center gap-2 bg-white outline outline-line rounded-sm'>
+                        <div className='flex max-md:flex-col-reverse sm:min-w-[200px] min-w-[100px] max-sm:h-24 sm:p-8 sm:justify-between justify-center items-center gap-2 bg-white outline outline-line rounded-sm'>
                             <div className='sm:h-full'>
                                 <h1>Number</h1>
-                                <p className='text-sm mt-2 max-sm:hidden'>09919067270</p>
+                                <p className='text-sm mt-2 max-md:hidden'>09919067270</p>
                             </div>
-                            <i className='bx bxs-phone sm:text-6xl text-3xl'></i> 
+                            <i className='bx bxs-phone md:text-6xl sm:text-5xl text-3xl'></i> 
                         </div>
                 </div>
             </div>

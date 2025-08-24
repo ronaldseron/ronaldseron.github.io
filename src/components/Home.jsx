@@ -38,7 +38,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
       
       <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8 bg-white ">
 
-            <div className="absolute adjust-pic:right-60 right-10 adj-pic-size:top-10 hide-pic:block hidden z-10">
+            <div className="absolute right-60 top-10 hide-pic:block hidden z-10">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -70,7 +70,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     </div>
                 </div>
             </div>
-            <div className="absolute adjust-pic:right-10 right-10 adj-pic-size:top-62 top hide-pic:block hidden z-20">
+            <div className="absolute right-10 top-62 hide-pic:block hidden z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -102,7 +102,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     </div>
                 </div>
             </div>
-            <div className="absolute adjust-pic:right-90 right-10 adj-pic-size:bottom-10 hide-pic:block hidden bottom-10 z-20">
+            <div className="absolute right-90 hide-pic:block hidden bottom-10 z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -133,7 +133,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     </div>
                 </div>
             </div>
-            <div className="absolute adjust-pic:left-70 left-10 adj-pic-size:-bottom-30 hide-pic:block hidden -bottom-10 z-20">
+            <div className="absolute left-70 -bottom-30 hide-pic:block hidden z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
