@@ -11,16 +11,20 @@
   --color-white: #FFFFFF;
   --color-button: #2c2c2c;
 
-  --max-width-standard: 1440px;
+  --max-width-standard: 1540px;
 
   --border-color-line: #e6e7e7;
   --outline-color-line: #e6e7e7;
 
   --breakpoint-adjust-pic: 1440px;
   --breakpoint-adj-pic-size: 1255px;
-  --breakpoint-hide-pic: 1125px;
+  --breakpoint-hide-pic: 1270px;
   --breakpoint-adj-text: 1350px;
   --breakpoint-adj-700: 700px;
+
+  /* Breakpoints for Boxes */
+  --breakpoint-bp-4: 1440px;
+  --breakpoint-bp-3: 1220px;
 
 
 }
