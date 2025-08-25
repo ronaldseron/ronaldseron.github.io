@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import sapt from "../assets/projects/sapt.png";
 import choose from "../assets/projects/choose.png";
 import record from "../assets/projects/record.png";
@@ -12,13 +13,10 @@ import nstpLts from "../assets/projects/nstp-lts.png";
 import nstpRotc from "../assets/projects/nstp-rotc.png";
 import nstpStudents from "../assets/projects/nstp-students.png";
 import ExtendLine from "./ExtendLine";
-import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
+import { scrollAnimations } from "../hooks/useFadeInOnScroll";
 
 
 const Projects = () => {
-  const fadeRef1 = useRef(null);
-
-  useFadeInOnScroll(fadeRef1);
 
   const projects = [
     {
@@ -114,15 +112,23 @@ const Projects = () => {
                 </div>
             </div>
 
-          <div ref={fadeRef1} className="flex lg:flex-row flex-col gap-1 fade-up p-1 bg-tertiary">
+          <div 
+            className="flex lg:flex-row flex-col gap-1 p-1 bg-tertiary"
+          >
             {projects.map((project, index) => (
-              <div key={index} className=" rounded-lg flex-1 flex flex-col gap-4 bg-white sm:p-8 p-1">
+                <motion.div
+                key={index}
+                className="rounded-sm flex-1 flex flex-col gap-4 bg-white sm:p-8 p-1"
+                {...scrollAnimations.card(index)}
+                >
                     {/* <div>
                         <h1>
                             {project.title}
                         </h1>
                     </div> */}
-                <div className="w-full grid shadow rounded-sm gap-1">
+                <div 
+                  className="w-full grid shadow rounded-sm gap-1"
+                >
                 {/* <div className="w-full grid shadow rounded-sm grid-cols-1 sm:grid-cols-2 gap-1"> */}
                     {project.images.map((image, imageIndex) => (
                         <img
@@ -134,54 +140,14 @@ const Projects = () => {
                     ))}
                 </div>
                 <div className="">
-                  <h3 className="text-base sm:text-start text-start font-semibold text-primary">
+                  <h3 
+                    className="text-base sm:text-start text-start font-semibold text-primary"
+                  >
                     {project.title}
                   </h3>
                   {/* <p className="text-secondary text-sm mb-6 leading-relaxed">{project.description}</p> */}
-
-                  {/* <div className="mb-6">
-                    <h4 className="text-sm font-medium text-primary mb-3">
-                      Technologies Used
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="bg-primary text-white px-3 py-1 rounded-full text-xs"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-medium text-primary mb-3">
-                      Key Features
-                    </h4>
-                    <ul className="text-sm text-secondary space-y-1">
-                      {project.features.map((feature, featureIndex) => (
-                        <li key={featureIndex}>• {feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      className="flex-1 bg-primary text-white text-center py-2 rounded-full text-sm hover:bg-button transition-colors duration-300"
-                    >
-                      View Code
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="flex-1 border border-primary text-primary text-center py-2 rounded-full text-sm hover:bg-primary hover:text-white transition-colors duration-300"
-                    >
-                      Live Demo
-                    </a>
-                  </div> */}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 

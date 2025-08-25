@@ -1,14 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import Border from "./Borders";
 import ExtendLine from "./ExtendLine";
-import useFadeInOnScroll from "../hooks/useFadeInOnScroll";
+import { motion } from "framer-motion";
+import { scrollAnimations } from "../hooks/useFadeInOnScroll";
+
 
 const About = () => {
-  const fadeRef1 = useRef(null);
-  const fadeRef2 = useRef(null);
-
-  useFadeInOnScroll(fadeRef1);
-  useFadeInOnScroll(fadeRef2);
 
   const skills = [
     {
@@ -66,9 +63,9 @@ const About = () => {
                     <ExtendLine />
 
                     {/* My Story & Skills */}
-                    <div
-                    ref={fadeRef1}
-                    className="flex-1 flex md:flex-row flex-col gap-2 fade-up will-change-transform will-change-opacity"
+                    <motion.div
+                    {...scrollAnimations.card(1)}
+                    className="flex-1 flex md:flex-row flex-col gap-2"
                     >
                     <div className="flex-1 h-auto bg-white outline outline-gray-950/5 rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
@@ -127,14 +124,15 @@ const About = () => {
                         ))}
                         </div>
                     </div> */}
-                    </div>
+                    </motion.div>
 
                     {/* What I Bring & Education */}
                     <div
-                    ref={fadeRef2}
-                    className="flex-1 flex flex-col gap-1 fade-up will-change-transform will-change-opacity"
+                    className="flex-1 flex flex-col gap-1"
                     >
-                    <div className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
+                    <motion.div 
+                    {...scrollAnimations.card(2)}
+                    className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
                         <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                         <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
@@ -150,9 +148,11 @@ const About = () => {
                         <li>• Strong communication and teamwork skills</li>
                         <li>• Attention to detail and clean code practices</li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
+                    <motion.div
+                    {...scrollAnimations.card(3)}
+                    className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
                         <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
                         <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
@@ -169,7 +169,7 @@ const About = () => {
                             </p>
                         </div>
                         </div>
-                    </div>
+                    </motion.div>
                     </div>
                 </div>
             </div>

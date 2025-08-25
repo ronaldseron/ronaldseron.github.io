@@ -1,6 +1,8 @@
 import profilePic from "../assets/profile.png";
 import TopBottomBorder from "./TopBottomBorder";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { scrollAnimations } from "../hooks/useFadeInOnScroll";
 
 const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   const [isHomeVisible, setIsHomeVisible] = useState(false);
@@ -38,7 +40,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
       
       <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8 bg-white ">
 
-            <div className="absolute right-60 top-10 hide-pic:block hidden z-10">
+            <motion.div
+            {...scrollAnimations.card(6)}
+            className="absolute right-60 top-10 hide-pic:block hidden z-10">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -69,8 +73,10 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
                     </div>
                 </div>
-            </div>
-            <div className="absolute right-10 top-62 hide-pic:block hidden z-20">
+            </motion.div>
+            <motion.div
+            {...scrollAnimations.card(7)}
+            className="absolute right-10 top-62 hide-pic:block hidden z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -101,8 +107,10 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
                     </div>
                 </div>
-            </div>
-            <div className="absolute right-90 hide-pic:block hidden bottom-10 z-20">
+            </motion.div>
+            <motion.div
+            {...scrollAnimations.card(8)}
+            className="absolute right-90 hide-pic:block hidden bottom-10 z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -132,8 +140,10 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
                     </div>
                 </div>
-            </div>
-            <div className="absolute left-70 -bottom-30 hide-pic:block hidden z-20">
+            </motion.div>
+            <motion.div
+            {...scrollAnimations.card(9)}
+            className="absolute left-70 -bottom-30 hide-pic:block hidden z-20">
                 <div
                     className={`flex-1 h-full flex justify-center items-center transition-all duration-700 px-4 bg-transparent ${
                     isHomeVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-x-full'
@@ -163,7 +173,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
                     </div>
                 </div>
-            </div>
+            </motion.div>
         <div
           className={`flex-1 transition-all duration-700  ${
             isHomeVisible
@@ -174,7 +184,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           <div className="relative flex items-center justify-start md:px-8 px-4">
             <TopBottomBorder />
 
-            <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
+            <motion.div 
+            {...scrollAnimations.card(1)}
+            className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
               <div className="absolute -right-0.5 sm:h-16 h-12 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
               <div className="absolute -left-0.5 sm:h-16 h-12 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10"></div>
 
@@ -182,19 +194,23 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               <p className=" text-primary font-medium lg:text-sm text-xs">
                 AVAILABLE FOR WORK
               </p>
-            </div>
+            </motion.div>
           </div>
           <div className=" flex sm:justify-start justify-center text-start md:mb-8 mb-0">
             <div className="">
               <div className=" max-w-5xl md:pl-8 md:py-5 px-4 py-4 text-balance tracking-tighter adj-text:text-[5rem] adj-700:text-[4.8rem] text-[2.5rem] leading-none text-primary z-50">
-                <h1>Emerging Web Dev, Ready to Compete and Collaborate.</h1>
+                <motion.h1
+                {...scrollAnimations.card(2)}
+                >Emerging Web Dev, Ready to Compete and Collaborate.</motion.h1>
               </div>
               <div className="relative md:pl-8 md:py-5 px-4 py-4">
                 <TopBottomBorder />
 
-                <p className="max-w-2xl lg:text-xl sm:text-lg text-sm text-secondary tracking-tight font-light">
+                <motion.p
+                {...scrollAnimations.card(3)}
+                className="max-w-2xl lg:text-xl sm:text-lg text-sm text-secondary tracking-tight font-light">
                   With hands-on freelancing experience and a passion for Web Development, I’m prepared to adapt fast and contribute immediately.
-                </p>
+                </motion.p>
               </div>
             </div>
 
@@ -236,22 +252,24 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
             <div className="absolute top-0 bottom-0 right-0 w-screen sm:border-y border-b border-line"></div>
             <div className="absolute top-0 bottom-0 left-0 w-screen sm:border-y border-b border-line"></div>
 
-            <a
+            <motion.a
               href="#projects"
+              {...scrollAnimations.card(4)}
               className="relative flex items-center justify-center bg-primary text-white sm:px-7 sm:py-2 px-5 py-2 rounded-full hover:bg-button transition-colors duration-300"
             >
               <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
               <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
               View My Work
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#about"
+              {...scrollAnimations.card(5)}
               className="relative flex items-center justify-center border border-primary text-primary sm:px-7 sm:py-2 px-5 py-2 rounded-full hover:bg-primary hover:text-white transition-colors duration-300"
             >
               <div className="absolute -right-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
               <div className="absolute -left-0.5 h-20 w-[1px] bg-gradient-to-b from-gray-50 via-gray-300 to-gray-50 -z-10 sm:block hidden"></div>
               About Me
-            </a>
+            </motion.a>
           </div>
 {/* 
             <div className="  sm:hidden block">

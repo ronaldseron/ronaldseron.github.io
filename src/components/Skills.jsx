@@ -1,5 +1,7 @@
 import frontendLogo from "../utils/frontend-logo.js";
 import ExtendLine from "./ExtendLine.jsx";
+import { motion } from "framer-motion";
+import { scrollAnimations } from "../hooks/useFadeInOnScroll.js";
 
 const Skills = () => {
 
@@ -24,15 +26,24 @@ const Skills = () => {
             <ExtendLine />
 
             {frontendLogo.map((logo, index) => (
-
-                <div key={index} className='flex max-sm:flex-col-reverse sm:min-w-[200px] min-w-[100px] max-sm:h-24 sm:p-8 sm:justify-between justify-center items-center gap-2 bg-white outline outline-line rounded-sm'>
-                    <div className='sm:h-full'>
-                        <h1 className="sm:text-2xl">{logo.name}</h1>
-                        <p className='text-sm mt-2 max-md:hidden'>{logo.exp}</p>
-                    </div>
-                    <img src={logo.image} alt={`img-${index}`} 
-                    className='md:w-15 sm:w-12  w-7'/>
-                </div>          
+                <div 
+                key={index} 
+                className=' sm:min-w-[200px] min-w-[100px] max-sm:h-24 hover:z-50 z-40 cursor-pointer hover:-translate-y-0.5 hover:scale-105 hover:shadow-2xl duration-300 transition-transform'
+                >
+                    <motion.div 
+                    {...scrollAnimations.card(index)}
+                    className='h-full bg-white flex max-md:flex-col-reverse sm:p-8 sm:justify-between justify-center items-center gap-2  outline outline-line rounded-sm'>
+                        <div
+                        className='sm:h-full'>
+                            <h1>{logo.name}</h1>
+                            <p className='text-sm mt-2 max-md:hidden'>{logo.exp}</p>
+                        </div>
+                        <motion.img
+                        src={logo.image} alt={`img-${index}`} 
+                        className='md:w-15 sm:w-12  w-7'
+                        />
+                    </motion.div>
+                </div>
             ))}
             </div>
         </div>
