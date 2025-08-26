@@ -112,44 +112,86 @@ const Projects = () => {
                 </div>
             </div>
 
-          <div 
-            className="flex lg:flex-row flex-col gap-1 p-1 bg-tertiary"
-          >
-            {projects.map((project, index) => (
-                <motion.div
-                key={index}
-                className="rounded-sm flex-1 flex flex-col gap-4 bg-white sm:p-8 p-1"
-                {...scrollAnimations.card(index)}
-                >
-                    {/* <div>
-                        <h1>
-                            {project.title}
-                        </h1>
-                    </div> */}
-                <div 
-                  className="w-full grid shadow rounded-sm gap-1"
-                >
-                {/* <div className="w-full grid shadow rounded-sm grid-cols-1 sm:grid-cols-2 gap-1"> */}
-                    {project.images.map((image, imageIndex) => (
-                        <img
-                        key={imageIndex}
-                        className="rounded-xs shadow w-full h-auto object-cover"
-                        src={image}
-                        alt=""
-                        />
-                    ))}
-                </div>
-                <div className="">
-                  <h3 
-                    className="text-base sm:text-start text-start font-semibold text-primary"
+            <div className=" p-1 bg-tertiary">
+              <div className="flex lg:flex-row flex-col gap-1">
+                {projects.map((project, index) => (
+                  <motion.div
+                    key={index}
+                    className=" flex-1 flex flex-col overflow-hidden duration-300 border bg-white border-line rounded-md"
+                    {...scrollAnimations.card(index)}
                   >
-                    {project.title}
-                  </h3>
-                  {/* <p className="text-secondary text-sm mb-6 leading-relaxed">{project.description}</p> */}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+                    {/* Project Image */}
+                    <div className="relative w-full pt-6 px-6 overflow-hidden">
+                      {project.images.map((image, imageIndex) => (
+                        <img
+                          key={imageIndex}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 rounded-sm"
+                          src={image}
+                          alt={project.title}
+                        />
+                      ))}
+                    </div>
+
+                    {/* Project Content */}
+                    <div className="p-6 flex flex-col flex-grow">
+                      {/* Title */}
+                      <h3 className="text-xl font-bold text-primary leading-tight">
+                        {project.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-secondary text-sm mb-4 leading-relaxed flex-grow">
+                        {/* {project.description} */}
+                      </p>
+
+                      {/* Technologies */}
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-primary mb-2">Technologies:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech, techIndex) => (
+                            <span
+                              key={techIndex}
+                              className="px-3 py-1 bg-tertiary text-primary text-xs rounded-full font-medium"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Key Features */}
+                      <div className="mb-6">
+                        <h4 className="text-sm font-semibold text-primary mb-2">Key Features:</h4>
+                        <ul className="text-secondary text-xs space-y-1">
+                          {project.features.slice(0, 3).map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-start">
+                              <span className="text-primary mr-2">•</span>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {/* Action Buttons */}
+                      <div className="flex gap-3 mt-auto">
+                        <a
+                          href={project.github}
+                          className="flex-1 bg-primary text-white text-center py-2 px-4 rounded text-sm font-medium hover:bg-opacity-90 transition-colors duration-200"
+                        >
+                          View Github
+                        </a>
+                        {/* <a
+                          href={project.demo}
+                          className="flex-1 border border-primary text-primary text-center py-2 px-4 rounded text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-200"
+                        >
+                          Live Demo
+                        </a> */}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
 
           {/* <div className="mt-12 text-center">
             <p className="text-secondary md:text-base sm:text-sm text-xs mb-6 px-4">

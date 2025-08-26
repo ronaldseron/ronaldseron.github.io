@@ -1,9 +1,21 @@
-import frontendLogo from "../utils/frontend-logo.js";
+import React, { useState } from 'react'
+import frontendLogo from "../data/frontend-logo.js";
+import backendLogo from "../data/backend-logo.js";
+import toolsLogo from "../data/tools-logo.js";
 import ExtendLine from "./ExtendLine.jsx";
 import { motion } from "framer-motion";
 import { scrollAnimations } from "../hooks/useFadeInOnScroll.js";
+import SkillCards from "./SkillCards.jsx";
 
 const Skills = () => {
+
+    const [activeTab, setActiveTab] = useState(0);
+    const tabs = [
+    { label: "Frontend", logos: frontendLogo },
+    { label: "Backend", logos: backendLogo },
+    { label: "Tools", logos: toolsLogo }
+    ];
+
 
   return (
     <div className=''>
@@ -16,36 +28,40 @@ const Skills = () => {
                         MY SKILLS
                     </p>
                 </div>
-                <div className="relative md:py-5 py-3">
+                <div className="relative w-full flex items-center max-sm:flex-col max-md:items-start justify-between md:py-5 py-3 max-md:gap-4">
                     <h2 className="lg:text-5xl md:text-4xl text-3xl font-medium text-primary">
                     Technology Used
                     </h2>
+                    {/* Tab Navigation */}
+                    <div className="relative flex gap-4 max-sm:w-full ">
+                        {tabs.map((tab, index) => (
+                        <button
+                            key={tab.label}
+                            className={` md:w-32 w-full py-1 text-center transition-all duration-300 z-30 cursor-pointer max-sm:text-sm ${
+                            activeTab === index 
+                                ? "bg-tertiary text-primary rounded-sm border-x border-line border-t border-t-line border-b" 
+                                : "bg-white text-gray-600 rounded-sm hover:bg-gray-100 border border-line"
+                            }`}
+                            onClick={() => setActiveTab(index)}
+                        >
+                            {tab.label}
+                        </button>
+                        ))}
+                    </div>
                 </div>
             </div>
-            <div className="w-full relative sm:text-xl text-sm grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] max-md:grid-cols-2 gap-1 font-light bg-tertiary p-1">
+
+            <div className="w-full relative sm:text-xl text-sm font-light bg-tertiary p-1">
             <ExtendLine />
 
-            {frontendLogo.map((logo, index) => (
-                <div 
-                key={index} 
-                className=' sm:min-w-[200px] min-w-[100px] max-sm:h-24 hover:z-50 z-40 cursor-pointer hover:-translate-y-0.5 hover:scale-105 hover:shadow-2xl duration-300 transition-transform'
-                >
-                    <motion.div 
-                    {...scrollAnimations.card(index)}
-                    className='h-full bg-white flex max-md:flex-col-reverse sm:p-8 sm:justify-between justify-center items-center gap-2  outline outline-line rounded-sm'>
-                        <div
-                        className='sm:h-full'>
-                            <h1>{logo.name}</h1>
-                            <p className='text-sm mt-2 max-md:hidden'>{logo.exp}</p>
-                        </div>
-                        <motion.img
-                        src={logo.image} alt={`img-${index}`} 
-                        className='md:w-15 sm:w-12  w-7'
-                        />
-                    </motion.div>
-                </div>
-            ))}
+
+            {/* Tab Content */}
+            <div className="grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] max-md:grid-cols-2 gap-1">
+                <SkillCards logos={tabs[activeTab].logos} scrollAnimations={scrollAnimations} />
             </div>
+
+            </div>
+
         </div>
     </div>
   )
