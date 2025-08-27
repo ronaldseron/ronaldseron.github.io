@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import sapt from "../assets/projects/sapt.png";
 import choose from "../assets/projects/choose.png";
@@ -14,9 +14,21 @@ import nstpRotc from "../assets/projects/nstp-rotc.png";
 import nstpStudents from "../assets/projects/nstp-students.png";
 import ExtendLine from "./ExtendLine";
 import { scrollAnimations } from "../hooks/useFadeInOnScroll";
+import ProjectModal from "./ProjectModal";
 
 
 const Projects = () => {
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleView = (projects) => {
+    console.log('Well');
+    setSelectedProject(projects);
+  };
+
+  const handleClose = () => {
+    setSelectedProject(null);
+  };
 
   const projects = [
     {
@@ -40,8 +52,8 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#",
-      images: [nstpDash],
-    //   images: [nstpDash, nstpStudents, nstpLts, nstpRotc],
+      // images: [nstpDash],
+      images: [nstpDash, nstpStudents, nstpLts, nstpRotc],
     },
     {
       title: "Student Academic Performance Tracker",
@@ -57,8 +69,8 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#",
-      images: [sapt],
-    //   images: [sapt, saptDash, choose, record],
+      // images: [sapt],
+      images: [sapt, saptDash, choose, record],
     },
     {
       title: "Web-based CSF and Evaluation System",
@@ -73,8 +85,8 @@ const Projects = () => {
       ],
       github: "#",
       demo: "#",
-      images: [evalDash],
-    //   images: [evalDash, evalReport, evalTraining, evalUser],
+      // images: [evalDash],
+      images: [evalDash, evalReport, evalTraining, evalUser],
     },
     // {
     //   title: "Portfolio Website",
@@ -89,11 +101,15 @@ const Projects = () => {
 
   return (
     <div
-      id="projects"
       className=" "
     >
       <div className=" ">
-        <div className=" ">
+        <div id="projects" className=" relative">
+
+          {selectedProject && (
+            <ProjectModal project={selectedProject} onClose={handleClose} />
+          )}
+          {/* Header */}
             <div className="flex flex-col justify-center items-start sm:px-8 px-4">
                 <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
                     <ExtendLine />
@@ -122,7 +138,7 @@ const Projects = () => {
                   >
                     {/* Project Image */}
                     <div className="relative w-full pt-6 px-6 overflow-hidden">
-                      {project.images.map((image, imageIndex) => (
+                      {project.images.slice(0, 1).map((image, imageIndex) => (
                         <img
                           key={imageIndex}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 rounded-sm"
@@ -173,20 +189,20 @@ const Projects = () => {
                       </div>
 
                       {/* Action Buttons */}
-                      <div className="flex gap-3 mt-auto">
-                        <a
-                          href={project.github}
-                          className="flex-1 bg-primary text-white text-center py-2 px-4 rounded text-sm font-medium hover:bg-opacity-90 transition-colors duration-200"
+                      {/* <div className="flex gap-3 mt-auto"> */}
+                        <button
+                          className="flex-1 bg-primary text-white border-2 border-primary py-1.5 px-4 rounded text-sm font-medium cursor-pointer hover:bg-white hover:text-primary transition-colors duration-200"
+                          onClick={() => handleView(project)}
                         >
-                          View Github
-                        </a>
+                          View
+                        </button>
                         {/* <a
                           href={project.demo}
                           className="flex-1 border border-primary text-primary text-center py-2 px-4 rounded text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-200"
                         >
                           Live Demo
                         </a> */}
-                      </div>
+                      {/* </div> */}
                     </div>
                   </motion.div>
                 ))}
