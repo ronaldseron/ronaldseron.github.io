@@ -110,7 +110,7 @@ const Projects = () => {
             <ProjectModal project={selectedProject} onClose={handleClose} />
           )}
           {/* Header */}
-            <div className="flex flex-col justify-center items-start sm:px-8 px-4">
+            <div className="flex flex-col justify-center items-start sm:px-8 px-4 bg-white">
                 <div className=" relative flex items-center gap-2 bg-tertiary md:px-3 md:py-1.5 px-2 py-1 rounded-full border border-line ">
                     <ExtendLine />
                     <div className=" w-2 h-2 bg-primary rounded-full"></div>
@@ -128,81 +128,94 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className=" p-1 bg-tertiary">
-              <div className="flex lg:flex-row flex-col gap-1">
+            <div className="">
+              <div className="flex flex-col">
                 {projects.map((project, index) => (
                   <motion.div
                     key={index}
-                    className=" flex-1 flex flex-col overflow-hidden duration-300 border bg-white border-line rounded-md"
+                    className={`flex-1`}
                     {...scrollAnimations.card(index)}
                   >
-                    {/* Project Image */}
-                    <div className="relative w-full pt-6 px-6 overflow-hidden">
-                      {project.images.slice(0, 1).map((image, imageIndex) => (
-                        <img
-                          key={imageIndex}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 rounded-sm"
-                          src={image}
-                          alt={project.title}
-                        />
-                      ))}
-                    </div>
-
-                    {/* Project Content */}
-                    <div className="p-6 flex flex-col flex-grow">
-                      {/* Title */}
-                      <h3 className="text-xl font-bold text-primary leading-tight">
-                        {project.title}
-                      </h3>
-
-                      {/* Description */}
-                      <p className="text-secondary text-sm mb-4 leading-relaxed flex-grow">
-                        {/* {project.description} */}
-                      </p>
-
-                      {/* Technologies */}
-                      <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-primary mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="px-3 py-1 bg-tertiary text-primary text-xs rounded-full font-medium"
-                            >
-                              {tech}
-                            </span>
+                    <div
+                    className={`flex-1 flex gap-1 overflow-hidden
+                    ${index % 2 ? 'flex-row-reverse' : 'flex-row'}`}>
+                      {/* Project Image */}
+                      <div className={`relative w-full bg-tertiary p-1 ${index % 2 ? 'border-l border-line ' : 'border-r border-line'}`}>
+                        <div className="p-8 overflow-hidden bg-white rounded-lg border border-line">
+                          {project.images.slice(0, 1).map((image, imageIndex) => (
+                            <img
+                              key={imageIndex}
+                              className="w-full h-full object-cover rounded-md"
+                              src={image}
+                              alt={project.title}
+                            />
                           ))}
                         </div>
                       </div>
 
-                      {/* Key Features */}
-                      <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-primary mb-2">Key Features:</h4>
-                        <ul className="text-secondary text-xs space-y-1">
-                          {project.features.slice(0, 3).map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-start">
-                              <span className="text-primary mr-2">•</span>
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                      {/* Project Content */}
+                      <div className="flex items-center p-8 text-nowrap">
+                        <div className="bg-tertiary p-1 rounded-lg border border-line">
+                          <div className=" flex flex-col justify-between bg-white rounded-md border border-line p-8">
+                            {/* Title */}
+                            <h3 className="text-2xl font-bold text-primary leading-tight mb-4">
+                              {project.title}
+                            </h3>
 
-                      {/* Action Buttons */}
-                      {/* <div className="flex gap-3 mt-auto"> */}
-                        <button
-                          className="flex-1 bg-primary text-white border-2 border-primary py-1.5 px-4 rounded text-sm font-medium cursor-pointer hover:bg-white hover:text-primary transition-colors duration-200"
-                          onClick={() => handleView(project)}
-                        >
-                          View
-                        </button>
-                        {/* <a
-                          href={project.demo}
-                          className="flex-1 border border-primary text-primary text-center py-2 px-4 rounded text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-200"
-                        >
-                          Live Demo
-                        </a> */}
-                      {/* </div> */}
+                            {/* Description */}
+                            {/* <p className="text-secondary text-sm mb-4 leading-relaxed flex-grow">
+                              {project.description}
+                            </p> */}
+
+                            {/* Technologies */}
+                            <div className="mb-4">
+                              <h4 className="text-lg font-semibold text-primary mb-2">Technologies:</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {project.technologies.map((tech, techIndex) => (
+                                  <span
+                                    key={techIndex}
+                                    className="px-3 py-1 bg-tertiary text-primary text-sm rounded-full font-medium"
+                                  >
+                                    {tech}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Key Features */}
+                            <div className="mb-6">
+                              <h4 className="text-lg font-semibold text-primary mb-2">Key Features:</h4>
+                              <ul className="text-secondary text-sm space-y-1">
+                                {project.features.slice(0, 3).map((feature, featureIndex) => (
+                                  <li key={featureIndex} className="flex items-start">
+                                    <span className="text-primary mr-2">•</span>
+                                    {feature}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+
+                            {/* Action Buttons */}
+                            {/* <div className="flex gap-3 mt-auto"> */}
+                              <button
+                                className=" bg-primary text-white border-2 border-primary py-1.5 px-4 rounded text-sm font-medium cursor-pointer hover:bg-white hover:text-primary transition-colors duration-200"
+                                onClick={() => handleView(project)}
+                              >
+                                View
+                              </button>
+                              {/* <a
+                                href={project.demo}
+                                className="flex-1 border border-primary text-primary text-center py-2 px-4 rounded text-sm font-medium hover:bg-primary hover:text-white transition-colors duration-200"
+                              >
+                                Live Demo
+                              </a> */}
+                            {/* </div> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative w-full h-24 bg-white">
+                      <ExtendLine />
                     </div>
                   </motion.div>
                 ))}

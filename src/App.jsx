@@ -72,11 +72,11 @@ function App() {
       <main className=' overflow-hidden'>
         <section className='lines fixed inset-0 max-w-standard mx-auto -z-10'></section>
         <section className='max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line'>
-          <section className='flex flex-col sm:gap-40 gap-20 sm:pb-40 pb-20 bg-white border-x border-line'>
-            <section id='hero'><Home showContent={showContent} isLoading={isLoading} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/></section>
-            <section><Intro /></section>
-            <section id='about'><About /></section>
-            <section id='skills'><Skills /></section>
+          <section className='flex flex-col border-x border-line'>
+            <section id='hero' className='sm:pb-40 pb-20 bg-white'><Home showContent={showContent} isLoading={isLoading} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/></section>
+            <section className='sm:pb-40 pb-20 bg-white'><Intro /></section>
+            <section id='about' className='sm:pb-40 pb-20 bg-white'><About /></section>
+            <section id='skills' className='sm:pb-40 pb-20 bg-white'><Skills /></section>
             <section id='projects'><Projects /></section>
           </section>
         </section>

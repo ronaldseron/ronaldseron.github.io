@@ -20,7 +20,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   return (
     <div
       id="hero"
-      className=" flex flex-col justify-center z-10 relative"
+      className=" flex flex-col justify-center  z-10 relative"
     >
 
       {/* Mobilie Menu Bar */}
@@ -38,7 +38,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           </div>
         )}
       
-      <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8 bg-white ">
+      <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8  bg-white ">
 
             <motion.div
             {...scrollAnimations.card(6)}
