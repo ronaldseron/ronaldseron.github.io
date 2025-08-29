@@ -13,7 +13,7 @@ const SkillCards = ({ logos, scrollAnimations }) => {
                     className='h-full bg-white flex max-md:flex-col-reverse sm:p-8 sm:justify-between justify-center items-center gap-2  outline outline-line rounded-sm'>
                         <div
                         className='sm:h-full'>
-                            <h1>{logo.name}</h1>
+                            <h1 className="font-medium">{logo.name}</h1>
                             <p className='text-sm mt-2 max-md:hidden'>{logo.data}</p>
                         </div>
                         <motion.img

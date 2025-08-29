@@ -69,7 +69,7 @@ const About = () => {
                     >
                     <div className="flex-1 h-auto bg-white outline outline-gray-950/5 rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
-                        <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
+                        <i className="bx bx-pencil-draw md:text-6xl text-2xl"></i>
                         <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
                             My Story
                         </h3>
@@ -134,7 +134,7 @@ const About = () => {
                     {...scrollAnimations.card(2)}
                     className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
-                        <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
+                        <i className="bx bx-fire-alt md:text-6xl text-2xl"></i>
                         <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
                             What I Bring
                         </h3>
@@ -154,7 +154,7 @@ const About = () => {
                     {...scrollAnimations.card(3)}
                     className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
-                        <i className="bx bx-bookmark-minus md:text-6xl text-2xl"></i>
+                        <i className="bx bx-education md:text-6xl text-2xl"></i>
                         <h3 className="lg:text-2xl sm:text-xl text-base font-medium text-primary text-nowrap">
                             Education
                         </h3>

@@ -9,58 +9,54 @@ const ProjectModal = ({ project, onClose }) => {
 
   return (
     <div 
-        className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-opacity-50"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-primary/5 backdrop-blur-sm bg-opacity-50"
         onClick={onClose}
     >
       {/* Modal content */}
       <div 
-        className="relative bg-white rounded-lg shadow-lg max-w-lg w-full p-6"
+        className="relative bg-white rounded-lg shadow-lg w-[90%] lg:p-6 md:p-4 p-2"
         onClick={(e) => e.stopPropagation()}
         >
         {/* Close button */}
-        <button
+        {/* <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-400 hover:text-primary text-2xl font-bold"
+          className="absolute top-7 left-9 text-primary hover:text-primary text-2xl font-bold"
           aria-label="Close"
         >
-          &times;
-        </button>
+          <i className='bx  bx-arrow-left-stroke text-5xl cursor-pointer'  ></i> 
+        </button> */}
 
         {/* Title */}
-        <h1 className="text-xl font-semibold text-primary mb-4 text-center">{project.title}</h1>
+        <h1 className="lg:text-3xl md:text-2xl sm:text-md text-sm font-semibold text-primary lg:mb-8 lg:mt-2 mb-4 mt-1 text-center">{project.title}</h1>
 
         {/* Image carousel */}
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center lg:gap-6 md:gap-4 gap-2">
           <button
             onClick={prevImage}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-primary hover:text-white rounded-full p-2 shadow transition"
+            className="h-full"
             aria-label="Previous"
           >
-            &#8592;
+            <i className='bx bx-chevron-left lg:text-8xl md:text-5xl text-3xl rounded-full cursor-pointer text-primary/20 hover:text-white hover:bg-primary/40'  ></i> 
           </button>
-          <div className='p-8'>
+          <div className='rounde-lg bg-gray-200 rounded-lg shadow-md'>
             <img
                 src={images[current]}
                 alt={`${project.title} ${current + 1}`}
-                className="w-[50rem] object-cover rounded transition-all duration-300"
+                className=" object-cover rounded transition-all duration-300"
             />
           </div>
           <button
             onClick={nextImage}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-80 hover:bg-primary hover:text-white rounded-full p-2 shadow transition"
+            className="h-full"
             aria-label="Next"
           >
-            &#8594;
+            <i className='bx bx-chevron-right lg:text-8xl md:text-5xl text-3xl rounded-full cursor-pointer text-primary/20 hover:text-white hover:bg-primary/40'  ></i> 
           </button>
         </div>
 
         {/* Image counter */}
-        <div className="text-center text-xs text-gray-500 mt-2">
+        <div className="text-center sm:text-sm text-xs text-gray-500 mt-4">
           {current + 1} / {images.length}
-        </div>
-
-        <div className='text-2xl text-center'>
-            (DESIGN ON PROGRESS...)
         </div>
       </div>
     </div>

@@ -137,15 +137,15 @@ const Projects = () => {
                     {...scrollAnimations.card(index)}
                   >
                     <div
-                    className={`flex-1 flex gap-1 overflow-hidden
-                    ${index % 2 ? 'flex-row-reverse' : 'flex-row'}`}>
+                    className={` flex md:gap-1 max-md:flex-col overflow-hidden
+                    ${index % 2 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
                       {/* Project Image */}
                       <div className={`relative w-full bg-tertiary p-1 ${index % 2 ? 'border-l border-line ' : 'border-r border-line'}`}>
-                        <div className="p-8 overflow-hidden bg-white rounded-lg border border-line">
+                        <div className="grid place-content-center h-full md:p-2 p-1 overflow-hidden bg-white rounded-lg border border-line">
                           {project.images.slice(0, 1).map((image, imageIndex) => (
                             <img
                               key={imageIndex}
-                              className="w-full h-full object-cover rounded-md"
+                              className="lg:w-120 w-100 h-full object-cover rounded-md shadow"
                               src={image}
                               alt={project.title}
                             />
@@ -154,11 +154,11 @@ const Projects = () => {
                       </div>
 
                       {/* Project Content */}
-                      <div className="flex items-center p-8 text-nowrap">
+                      <div className=" flex items-center max-md:justify-center lg:p-8 md:p-6 p-2 lg:w-200 md:w-130">
                         <div className="bg-tertiary p-1 rounded-lg border border-line">
-                          <div className=" flex flex-col justify-between bg-white rounded-md border border-line p-8">
+                          <div className=" flex flex-col justify-between bg-white rounded-md border border-line lg:p-8 md:p-6 p-2 text-ellipsis">
                             {/* Title */}
-                            <h3 className="text-2xl font-bold text-primary leading-tight mb-4">
+                            <h3 className="lg:text-2xl md:text-xl font-bold text-primary leading-tight mb-4">
                               {project.title}
                             </h3>
 
@@ -169,12 +169,12 @@ const Projects = () => {
 
                             {/* Technologies */}
                             <div className="mb-4">
-                              <h4 className="text-lg font-semibold text-primary mb-2">Technologies:</h4>
+                              <h4 className="lg:text-lg text-md font-semibold text-primary mb-2">Technologies:</h4>
                               <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, techIndex) => (
                                   <span
                                     key={techIndex}
-                                    className="px-3 py-1 bg-tertiary text-primary text-sm rounded-full font-medium"
+                                    className="px-3 py-1 bg-tertiary text-primary lg:text-sm text-xs rounded-full font-medium"
                                   >
                                     {tech}
                                   </span>
@@ -183,9 +183,9 @@ const Projects = () => {
                             </div>
 
                             {/* Key Features */}
-                            <div className="mb-6">
-                              <h4 className="text-lg font-semibold text-primary mb-2">Key Features:</h4>
-                              <ul className="text-secondary text-sm space-y-1">
+                            <div className="lg:mb-6 mb-2">
+                              <h4 className="lg:text-lg text-md font-semibold text-primary mb-2">Key Features:</h4>
+                              <ul className="text-secondary lg:text-sm text-xs space-y-1">
                                 {project.features.slice(0, 3).map((feature, featureIndex) => (
                                   <li key={featureIndex} className="flex items-start">
                                     <span className="text-primary mr-2">•</span>
@@ -198,7 +198,7 @@ const Projects = () => {
                             {/* Action Buttons */}
                             {/* <div className="flex gap-3 mt-auto"> */}
                               <button
-                                className=" bg-primary text-white border-2 border-primary py-1.5 px-4 rounded text-sm font-medium cursor-pointer hover:bg-white hover:text-primary transition-colors duration-200"
+                                className=" bg-primary text-white border-2 border-primary py-1.5 px-4 rounded md:text-sm text-xs font-medium cursor-pointer hover:bg-white hover:text-primary transition-colors duration-200 md:mt-6 mt-4"
                                 onClick={() => handleView(project)}
                               >
                                 View
@@ -214,7 +214,7 @@ const Projects = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="relative w-full h-24 bg-white">
+                    <div className="relative w-full md:h-24 h-12 bg-white">
                       <ExtendLine />
                     </div>
                   </motion.div>

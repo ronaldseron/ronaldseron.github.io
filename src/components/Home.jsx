@@ -3,6 +3,10 @@ import TopBottomBorder from "./TopBottomBorder";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { scrollAnimations } from "../hooks/useFadeInOnScroll";
+import laravel from "../assets/skills/backend/laravel.svg";
+import react from "../assets/skills/frontend/react.svg";
+import vue from "../assets/skills/frontend/vue.svg";
+import tailwind from "../assets/skills/frontend/tailwind.svg";
 
 const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   const [isHomeVisible, setIsHomeVisible] = useState(false);
@@ -38,7 +42,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
           </div>
         )}
       
-      <div className="relative flex-1 md:py-34 py-24 flex items-center gap-8  bg-white ">
+      <div className="relative flex-1 md:py-34 pt-24 pb-20 flex items-center gap-8  bg-white ">
 
             <motion.div
             {...scrollAnimations.card(6)}
@@ -51,7 +55,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     <div className="relative w-[100px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
-                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
+                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700  bg-gradient-to-t from-gray-50 to-gray-100 p-4"
                         style={{
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
@@ -64,9 +68,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                         {/* <div className="absolute top-10 -bottom-10 -right-10 left-10 rounded-2xl bg-black/4 -z-10"></div> */}
 
                         <img
-                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
-                        src={profilePic}
-                        alt="Profile Picture"
+                        className="w-full h-full object-cover rounded-2xl"
+                        src={tailwind}
+                        alt="Tailwind"
                         />
                     </div>
 
@@ -85,7 +89,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     <div className="relative w-[140px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
-                        className="relative w-full h-full rounded-2xl shadow-xl  z-10 transition-transform duration-700"
+                        className="relative w-full h-full rounded-2xl shadow-xl  z-10 transition-transform duration-700  bg-gradient-to-t from-gray-50 to-gray-100 p-4"
                         style={{
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
@@ -98,9 +102,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                         {/* <div className="absolute top-10 -bottom-10 right-10 -left-10 rounded-2xl bg-black/4 -z-10"></div> */}
                         
                         <img
-                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
-                        src={profilePic}
-                        alt="Profile Picture"
+                        className="w-full h-full object-cover rounded-2xl"
+                        src={vue}
+                        alt="Vue"
                         />
                     </div>
 
@@ -119,7 +123,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     <div className="relative w-[180px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
-                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
+                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700  bg-gradient-to-t from-gray-50 to-gray-100 p-4"
                         style={{
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
@@ -131,9 +135,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                         {/* <div className="absolute top-10 -bottom-10 -right-10 left-10 rounded-2xl bg-black/4 -z-10"></div> */}
                         
                         <img
-                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
-                        src={profilePic}
-                        alt="Profile Picture"
+                        className="w-full h-full object-cover rounded-2xl"
+                        src={react}
+                        alt="React"
                         />
                     </div>
 
@@ -152,7 +156,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                     <div className="relative w-[220px] bg-transparent" style={{ perspective: '1000px' }}>
    
                     <div
-                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700"
+                        className="relative w-full h-full rounded-2xl shadow-lg z-10 transition-transform duration-700  bg-gradient-to-t from-gray-50 to-gray-100 p-6"
                         style={{
                         transform: isHovered
                             ? 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)'
@@ -164,9 +168,9 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
                         {/* <div className="absolute top-10 -bottom-10 -right-10 left-10 rounded-2xl bg-black/4 -z-10"></div> */}
                         
                         <img
-                        className="w-full h-full object-cover rounded-2xl bg-gradient-to-t from-gray-100 to-gray-200"
-                        src={profilePic}
-                        alt="Profile Picture"
+                        className="w-full h-full object-cover rounded-2xl"
+                        src={laravel}
+                        alt="Laravel"
                         />
                     </div>
 
