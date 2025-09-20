@@ -3,8 +3,7 @@ import ExtendLine from './ExtendLine';
 
 const Footer = () => {
   return (
-    <div className=''>
-      <div className="max-w-standard mx-auto lg:px-12 md:px-8 sm:px-4 px-3 border-x border-line overflow-hidden">
+      <div className="max-w-standard mx-auto lg:px-10 md:px-8 sm:px-4 px-3 border-x border-line overflow-hidden">
         <div className='relative bg-white w-full sm:p-8 p-4 border-x border-line'>
           <ExtendLine />
           <div className="flex flex-col sm:flex-row justify-between gap-8">
@@ -70,7 +69,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
