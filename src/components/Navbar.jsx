@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PortfolioLogo from '../assets/PortfolioLogo.svg';
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
         ? 'opacity-100 translate-y-0' 
         : 'opacity-0 -translate-y-full'
     }`}>
-      <div className={` max-w-standard mx-auto`}>
+      <div className='relative max-w-standard mx-auto'>
 
         {/* Desktop Size NavBar */}
         <div className="lg:flex hidden items-center justify-between gap-12 px-20 py-4">
@@ -97,6 +98,28 @@ const Navbar = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
 
         
       </div>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -30, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="md:hidden top-full fixed left-0 right-0 flex flex-col items-center justify-center bg-white shadow-md px-4 py-8 z-40"
+          >
+            <a href="#about" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
+              About
+            </a>
+            <a href="#projects" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
+              Projects
+            </a>
+            <a href="#contact" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
+              Contact
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }
