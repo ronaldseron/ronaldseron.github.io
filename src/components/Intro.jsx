@@ -30,7 +30,7 @@ const Intro = () => {
                     
                     <SkillCards logos={Socials} scrollAnimations={scrollAnimations} />
                 
-                    <div className='sm:min-w-[200px] min-w-[100px] max-sm:h-24 hover:z-50 z-40 cursor-pointer hover:-translate-y-0.5 hover:scale-105 hover:shadow-2xl duration-300 transition-transform'>
+                    <div className='sm:min-w-[200px] min-w-[100px] max-sm:h-24 hover:z-40 z-30 cursor-pointer hover:-translate-y-0.5 hover:scale-105 hover:shadow-2xl duration-300 transition-transform'>
                         <motion.div
                         {...scrollAnimations.card(4)}
                         className='h-full bg-white flex max-md:flex-col-reverse sm:p-8 sm:justify-between justify-center items-center gap-2  outline outline-line rounded-sm'>
