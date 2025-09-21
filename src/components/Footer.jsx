@@ -33,23 +33,23 @@ const Footer = () => {
                   href="mailto:seronronalddalida@gmail.com" 
                   className="hover:text-white transition-colors duration-300 "
                 >
-                  📧 seronronalddalida@gmail.com
+                  seronronalddalida@gmail.com
                 </a>
-                <a 
+                {/* <a 
                   href="https://linkedin.com/in/yourprofile" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  💼 LinkedIn Profile
-                </a>
+                  LinkedIn Profile
+                </a> */}
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/ronaldseron" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-300"
                 >
-                  💻 GitHub Profile
+                  GitHub Profile
                 </a>
                 {/* <span className="text-sm">
                   📍 Available for opportunities worldwide (Open to relocation)
