@@ -45,7 +45,7 @@ const Projects = () => {
           <motion.div
             key={index}
             className={`flex-1`}
-            {...scrollAnimations.card(index)}
+            // {...scrollAnimations.card(index)}
           >
             <div
               className={` flex md:gap-1 max-md:flex-col overflow-hidden
