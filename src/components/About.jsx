@@ -64,7 +64,7 @@ const About = () => {
 
                     {/* My Story & Skills */}
                     <motion.div
-                    {...scrollAnimations.card(1)}
+                    // {...scrollAnimations.card(1)}
                     className="flex-1 flex md:flex-row flex-col gap-2"
                     >
                     <div className="flex-1 h-auto bg-white outline outline-gray-950/5 rounded-sm md:p-8 p-4">
@@ -131,7 +131,7 @@ const About = () => {
                     className="flex-1 flex flex-col gap-1"
                     >
                     <motion.div 
-                    {...scrollAnimations.card(2)}
+                    // {...scrollAnimations.card(2)}
                     className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
                         <i className="bx bx-fire-alt md:text-6xl text-2xl"></i>
@@ -151,7 +151,7 @@ const About = () => {
                     </motion.div>
 
                     <motion.div
-                    {...scrollAnimations.card(3)}
+                    // {...scrollAnimations.card(3)}
                     className="flex-1 bg-white border border-line rounded-sm md:p-8 p-4">
                         <div className="md:mb-6 mb-3 flex gap-4 items-center">
                         <i className="bx bx-education md:text-6xl text-2xl"></i>
