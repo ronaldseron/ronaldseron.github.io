@@ -28,7 +28,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
     >
 
       {/* Mobilie Menu Bar */}
-        {isMenuOpen && (
+        {/* {isMenuOpen && (
           <div className="md:hidden fixed inset-0 flex flex-col items-center justify-center bg-white shadow-md px-4 py-2 z-40">
             <a href="#about" onClick={() => setIsMenuOpen(false)} className="py-2 hover:text-primary">
               About
@@ -40,7 +40,7 @@ const Home = ({ showContent, isLoading, isMenuOpen, setIsMenuOpen }) => {
               Contact
             </a>
           </div>
-        )}
+        )} */}
       
       <div className="relative flex-1 md:py-34 pt-24 pb-20 flex items-center gap-8  bg-white ">
 
