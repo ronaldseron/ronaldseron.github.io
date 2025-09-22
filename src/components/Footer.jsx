@@ -1,5 +1,8 @@
 import React from 'react'
 import ExtendLine from './ExtendLine';
+import github from "../assets/socials/github.png";
+import gmail from "../assets/socials/gmail.png";
+
 
 const Footer = () => {
   return (
@@ -31,9 +34,10 @@ const Footer = () => {
               <div className="flex flex-col gap-3 text-primary/80 md:text-lg text-sm">
                 <a 
                   href="mailto:seronronalddalida@gmail.com" 
-                  className="hover:text-white transition-colors duration-300 "
+                  className="flex items-center gap-2 hover:underline z-10"
                 >
-                  seronronalddalida@gmail.com
+                  <img src={gmail} alt="Gmail Account" className="w-7" />
+                  Gmail Account
                 </a>
                 {/* <a 
                   href="https://linkedin.com/in/yourprofile" 
@@ -46,9 +50,9 @@ const Footer = () => {
                 <a 
                   href="https://github.com/ronaldseron" 
                   target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors duration-300"
+                  className="flex items-center gap-2 hover:underline z-10"
                 >
+                  <img src={github} alt="Github Account" className="w-7" />
                   GitHub Profile
                 </a>
                 {/* <span className="text-sm">
