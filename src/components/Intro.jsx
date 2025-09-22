@@ -35,7 +35,7 @@ const Intro = () => {
                         // {...scrollAnimations.card(4)}
                         className='h-full bg-white flex max-md:flex-col-reverse sm:p-8 sm:justify-between justify-center items-center gap-2  outline outline-line rounded-sm'>
                             <div className='sm:h-full'>
-                                <h1>Number</h1>
+                                <h1 className="font-medium">Number</h1>
                                 <p className='text-sm mt-2 max-md:hidden'>09919067270</p>
                             </div>
                             <i className='bx bxs-phone md:text-6xl sm:text-5xl text-3xl'></i> 
